@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo NeverSeen</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet"> 
+</head>
+<body ng-app="listado">
+  
+ <div ng-controller="kontroler"  class="container">
+   
+   <div class="container2">
+     
+  <div class="lista-wpis" id="scrollbar">
+    
+    <div ng-repeat="item in list" class="lista-class">
+      
+      <li class="item-style"><input type="checkbox" class="checkbox" id="myCheck" onclick="checkbox()"><h3 style="text-decoration: none;" id="text">{{item.notatka}}</h3><button ng-click="removeItem($index)" class="remove-btn">Usuń</button></li>
+      
+    </div>
+    
+  </div>
+     
+    <form class="always-bottom" name="form">
+      
+    <input type="text" id="test" placeholder="Dodaj swoja notatke" ng-model="dodajPlik" class="input-wpisz" required>
+      
+    <button class="btn-add" ng-disabled="form.$invalid" ng-click="addItem()">Dodaj</button>
+      
+    </form>
+    
+  </div>
+   
+  </div>
+  
+  <script>
+    
+    var app = angular.module( 'listado' , []);
+   
+  </script>
+  
+  <script>
+    app.controller('kontroler', ['$scope', function($scope) {
+      $scope.list = [
+        {
+            "notatka": "Przykładowa notatka",
+      }       
+      ];
+      
+      $scope.addItem = function(){
+        $scope.list.push({'notatka':$scope.dodajPlik});
+        $scope.dodajPlik = '';
+      }
+      
+      $scope.removeItem = function(index){
+        $scope.list.splice(index, 1);
+      }
+    }])
+    
+  </script>
+  
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
