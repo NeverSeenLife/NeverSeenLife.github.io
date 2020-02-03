@@ -1,0 +1,180 @@
+@font-face{
+    font-family: crsmuonline;
+    src: url(../font.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../background.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+
+/* header */
+
+.header-top{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #00000080;
+    overflow: hidden;
+    padding: 0px 100px;
+}
+
+.header-top .logo{
+    width: 90px;
+    height: 70px;
+}
+
+.header-top .menu-top{
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+}
+
+.header-top .menu-top li{
+    margin: 0 20px;
+}
+.header-top .menu-top .menu-btn{
+    font-size: 18px;
+    color: #666666;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+.header-top .menu-top .menu-btn:hover{
+    color: #ffffff;
+
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: black;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+#start{
+    color: #ffffff;
+}
+
+
+/* article */
+
+.main-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;;
+    min-height: 90vh;
+    flex-flow: column;
+}
+.main-article .heading1{
+    font-size: 70px;
+    text-transform: uppercase;
+    user-select: none;
+    color: #ffffff;
+}
+.main-article .heading2{
+    color: #eeeeee;
+    font-size: 33px;
+    text-transform: uppercase;
+}
+
+/* second div */
+
+.second{
+    border-top: 1px solid #fff;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background: #000000;
+    color: #ffffff;
+}
+
+
+
+/* footer */
+
+.main-footer{
+    color: #ffffff;
+    background: #00000080;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;;
+    height: 100px;
+}
+.main-footer .footer-email{
+    color: #ffffff;
+}
+
+.main-footer .footer-mail-link{
+    color: burlywood;
+}
+
+.main-footer .footer-text{
+    
+}
+
+.firefox{
+    display: none;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    color: #ffffff;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILNA */ 
+
+@media only screen and (max-width: 900px) {
+
+    .header-top{
+        padding: 0px;
+        margin: 0;
+
+    }
+    
+    .header-top .logo{
+        margin: 0;
+    }
+
+    .header-top .menu-top{
+        display: none;
+    }
+
+}
