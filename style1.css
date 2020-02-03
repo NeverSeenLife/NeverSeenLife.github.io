@@ -1,0 +1,12 @@
+body {
+  color: #666;
+}
+
+.test {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100px;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style1.css.map */

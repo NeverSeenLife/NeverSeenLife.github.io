@@ -1,0 +1,14 @@
+$black: #000;
+$sebsk: #666;
+$test: row wrap;
+$szerG: 100px;
+$proce: 100%;
+body{
+    color: $sebsk;
+}
+.test{
+    display: flex;
+    flex-flow: $test;
+    width: $szerG;
+    height: $proce;
+}
