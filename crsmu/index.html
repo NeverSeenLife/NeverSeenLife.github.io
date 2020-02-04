@@ -8,6 +8,7 @@
     <meta name="description" content="CRS Mu Online">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap" rel="stylesheet"> 
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="js/plugins.js"></script>
 </head>
 <body onload="cos()">
     
@@ -16,35 +17,40 @@
             <a href="#"><img src="images2.png" class="logo"></a>
 
             <nav class="menu-top">
-                <li><a href="#" id="start" class="menu-btn">Start</a></li>
+                <li><a href="#top" id="start" class="menu-btn">Start</a></li>
                 <li><a href="#" class="menu-btn">Ranking</a></li>
                 <li><a href="#" class="menu-btn">Pobierz</a></li>
                 <li><a href="#" class="menu-btn">Logowanie</a></li>
-                <li><a href="#" class="menu-btn">Rejestracja</a></li>
+                <li><a href="#bot" class="menu-btn">Rejestracja</a></li>
             </nav>
 
             <div class="time">
                 <p id="clock"></p>
                 </div>
 
+            <div class="hamburgerDiv">
+                <button class="hamburger"></button>
+            </div>
+
     </header>
 
-    <article class="main-article">
+    <article id="top" class="main-article">
 
         <h1 class="heading1">CRS Mu Online</h1>
         <h3 class="heading2">Serwer mu online remaster</h3>
-
+        <a href="#bot" class="menu-btn">click</a>
     </article>
 
     <div class="second">
 
+        <button id="button">do gory</button>
         <h1>Content</h1>
         <p>test</p>
 
     </div>
 
 
-    <footer class="main-footer">
+    <footer id="bot" class="main-footer">
 
     <p class="footer-email">E-mail:<a class="footer-mail-link" href="mailto:polska@iamadrian.cba.pl">admin@iamadrian.cba.pl</a></p>
 

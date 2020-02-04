@@ -26,7 +26,7 @@ function cos(){
     else{
       test = sekunda;
     }
-    document.getElementById("clock").innerHTML = "CZAS SERWERA: " + test3 + ":" + test2 + ":" + test;
+    document.getElementById("clock").innerHTML = "<span class=\"text-timer\">CZAS SERWERA: </span>" + test3 + ":" + test2 + ":" + test;
       
       setTimeout(cos, 1000);
     }
