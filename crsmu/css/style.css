@@ -15,6 +15,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    background-color: #000000;
     font-family: 'Nanum Gothic Coding', monospace;
     -webkit-overflow-scrolling: touch;    
 }
@@ -24,7 +25,6 @@ button {
     border: none;
     color: #ffffff;
 }
-
 
 /* header */
 
@@ -41,6 +41,7 @@ button {
     overflow: hidden;
     padding: 0px 100px;
     transition: all ease-out .5s;
+    box-shadow: 1px 1px 20px 1px #000000;
 }
 
 .header-top .logo{
@@ -101,6 +102,7 @@ button {
     width: 100%;;
     min-height: 90vh;
     flex-flow: column;
+    text-shadow: 1px 1px 5px #000000;
 }
 .main-article .heading1{
     font-size: 70px;
@@ -112,6 +114,7 @@ button {
     color: #eeeeee;
     font-size: 33px;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 /* second div */
@@ -119,12 +122,12 @@ button {
 .second{
     border-top: 1px solid #fff;
     width: 100%;
-    height: 400px;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    background: #000000;
+    background: #0c0c0c;
     color: #ffffff;
 }
 

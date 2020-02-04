@@ -30,3 +30,16 @@ function cos(){
       
       setTimeout(cos, 1000);
     }
+
+
+function hamburger(){
+  const hamburger = document.querySelector('.hamburger');
+  const sideNavLinks = document.querySelector('.side-nav-list');
+  const links = document.querySelectorAll('.side-nav-list li');
+
+  hamburger.addEventListener('click', () => {
+      sideNavLinks.classList.toggle("open");
+      hamburger.classList.toggle("open");
+  });
+
+}
