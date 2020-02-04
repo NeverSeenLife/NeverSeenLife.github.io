@@ -25,6 +25,13 @@ button {
     color: #ffffff;
 }
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1;
+}
+
 
 /* header */
 
