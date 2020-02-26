@@ -195,10 +195,24 @@ button {
 
 .black{
     z-index: 120;
-    height: 400px;
+    min-height: 100vh;
     background: url(../back2.png) top;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black h2{
+    font-size: 4rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #000000;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+    letter-spacing: 5px;
 }
 
 /* footer */

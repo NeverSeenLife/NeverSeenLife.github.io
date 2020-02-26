@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie - CRS Mu Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logowanie.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CRS Mu Online">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap" rel="stylesheet"> 
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+</head>
+<body onload="cos()">
+    
+    <header class="header-top">
+
+            <a href="index.html"><img src="images2.png" class="logo"></a>
+
+            <div class="time">
+                <p id="clock"></p>
+                </div>
+
+            <nav class="menu-top">
+                <li><a href="#top" class="menu-btn">Start</a></li>
+                <li><a href="#" class="menu-btn">Ranking</a></li>
+                <li><a href="#" class="menu-btn">Pobierz</a></li>
+                <li><a href="login.html" class="menu-btn">Logowanie</a></li>
+                <li><a href="#bot" class="menu-btn">Rejestracja</a></li>
+            </nav>
+
+            <div class="hamburgerDiv">
+                <button class="hamburger"></button>
+            </div>
+
+    </header>
+
+    <article id="top" class="main-article">
+
+        <div class="login">
+
+            <h1 class="loginh1">Logowanie</h1>
+
+            <form class="loginForm">
+                <input class="loginInput" type="text" name="username" placeholder="Username" required>
+                <input class="passInput" id="pass" type="password" name="password" placeholder="Password" required>
+                
+
+
+                <input class="submit" type="submit" value="Login">
+                <label style="user-select: none; font-size: 20px; color: white;" >
+                    <input type="checkbox" onclick="showPass()" name="regulamin" value="true" checked>
+                    Pokaż hasło
+                  </label>
+            </form>
+                <script>
+                function showPass() {
+                    var x = document.getElementById("pass");
+                    if (x.type === "password") {
+                      x.type = "text";
+                    } else {
+                      x.type = "password";
+                    }
+                  } </script>
+
+        </div>
+
+    </article>
+
+
+    <footer id="bot" class="main-footer">
+
+    <p class="footer-email">E-mail:<a class="footer-mail-link" href="mailto:polska@iamadrian.cba.pl">admin@iamadrian.cba.pl</a></p>
+
+    <p class="footer-text">CRS MU ONLINE 2020 &copy</p>
+    <button id="button" class="btn-up">⬆️</button>
+    </footer>
+
+    <div class="firefox">
+        <img src="icon.png"><p>Mozilla Firefox <br>
+            Do pobrania.</p>
+
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
