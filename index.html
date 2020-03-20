@@ -11,7 +11,18 @@
   <title>NeverSeen</title>
 </head>
 <body>
-  
+
+
+  <div id="loading" class="loading">
+      <div class="circle"></div>
+      <p class="load">Welcome</p>
+  </div>
+  <script>
+    $(window).on("load",function(){
+         $(".loading").fadeOut("slow");
+    });
+  </script>
+
   <nav class="menu">
     
     <a href="#" class="logo">NeverSeen</a>
@@ -66,7 +77,7 @@
       <h1 class="main_heading_text">CREATING FOR PEOPLE<span class="ani">_</span></h1>
       <button class="btn_1">CHECK ME</button>
       
-<!--<span class="black_back"></span> -->
+        <!--<span class="black_back"></span> -->
       <a href="#aw" class="arrowHref"><i class="fas fa-angle-double-down arrow"></i></a>
         
   </header>
