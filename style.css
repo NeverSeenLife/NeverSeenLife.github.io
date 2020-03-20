@@ -5,6 +5,24 @@
   box-sizing: border-box;
 }
 
+:root{
+  scrollbar-color: rgb(210,210,210) #1a1b1e !important;
+  scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+  width: 7px !important;
+}
+::-webkit-scrollbar-track {
+  background: #1a1b1e !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(210,210,210) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(210,210,210,.7) !important;
+}
+
 body {
   font-family: 'Catamaran', sans-serif;
   background-color: #fff;
