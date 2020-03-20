@@ -412,6 +412,9 @@ input {
 .loading .load{
   user-select: none;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes loadingCircle{

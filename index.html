@@ -15,13 +15,9 @@
 
   <div id="loading" class="loading">
       <div class="circle"></div>
-      <p class="load">Welcome</p>
+      <div class="load"><p class="loader">100</p><span>%</span></div>
   </div>
-  <script>
-    $(window).on("load",function(){
-         $(".loading").fadeOut("slow");
-    });
-  </script>
+
 
   <nav class="menu">
     
@@ -53,7 +49,20 @@
     </div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">  </script>
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+      <script>
+        $(window).on("load",function(){
+             $(".loading").fadeOut("slow");
+        });
+      </script>
+
+        <script>
+          $('.loader').counterUp({
+            delay:15,
+            time:600});
+        </script>
+
         <script>
           $(document).on('click', 'ul li', function(){
             $(this).addClass('m_active').siblings().removeClass('m_active');
