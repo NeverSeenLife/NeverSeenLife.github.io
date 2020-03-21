@@ -83,7 +83,7 @@ body {
 }
 
 .heading {
-  background: url("background.jpg") no-repeat;
+  background: url("img/background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
