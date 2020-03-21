@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
   <title>NeverSeen</title>
 </head>
@@ -29,20 +30,20 @@
       
       <ul class="nav">
         <li class="nav_menu m_active"><a href="#" class="nav_menu_a">Home</a></li>
-        <li class="nav_menu"><a href="#aw" class="nav_menu_a">About</a></li>
-        <li class="nav_menu"><a href="#aw" class="nav_menu_a">Projects</a></li>
-        <li class="nav_menu"><a href="#aw" class="nav_menu_a">Pricing</a></li>
-        <li class="nav_menu"><a href="#aw" class="nav_menu_a">Contact</a></li>
+        <li class="nav_menu"><a href="#about" class="nav_menu_a">About</a></li>
+        <li class="nav_menu"><a href="#projects" class="nav_menu_a">Projects</a></li>
+        <li class="nav_menu"><a href="#pricing" class="nav_menu_a">Pricing</a></li>
+        <li class="nav_menu"><a href="#contact" class="nav_menu_a">Contact</a></li>
       </ul>
     
     <div class="menu_hamburger">
       
       <ul class="nav_mobile">
         <li class="nav_mobile_li m_active"><a href="#" class="nav_mobile_a">Home</a></li>
-        <li class="nav_mobile_li"><a href="#aw" class="nav_mobile_a">About</a></li>
-        <li class="nav_mobile_li"><a href="#aw" class="nav_mobile_a">Projects</a></li>
-        <li class="nav_mobile_li"><a href="#aw" class="nav_mobile_a">Pricing</a></li>
-        <li class="nav_mobile_li"><a href="#aw" class="nav_mobile_a">Contact</a></li>
+        <li class="nav_mobile_li"><a href="#about" class="nav_mobile_a">About</a></li>
+        <li class="nav_mobile_li"><a href="#projects" class="nav_mobile_a">Projects</a></li>
+        <li class="nav_mobile_li"><a href="#pricing" class="nav_mobile_a">Pricing</a></li>
+        <li class="nav_mobile_li"><a href="#contact" class="nav_mobile_a">Contact</a></li>
       </ul>
       
       
@@ -51,6 +52,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">  </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
       <script>
         $(window).on("load",function(){
              $(".loading").fadeOut("slow");
@@ -83,51 +88,89 @@
   </nav>
   
   <header class="heading">     
-      <h1 class="main_heading_text">CREATING FOR PEOPLE<span class="ani">_</span></h1>
+      <h1 class="main_heading_text">NEVERSEENDESIGN<span class="ani">_</span></h1>
+      <h3></h3>
       <button class="btn_1">CHECK ME</button>
       
-        <!--<span class="black_back"></span> -->
-      <a href="#aw" class="arrowHref"><i class="fas fa-angle-double-down arrow"></i></a>
+      <a href="#about" class="arrowHref"><i class="fas fa-angle-double-down arrow"></i></a>
         
   </header>
     
-  <article class="main" id="aw">
+  <article class="main">
       
-      <div class="main_content_1">
-        <img src="" alt="Photo" class="main_photo_about1">
-        <div class="holder_heading">
-          <h2>Nowosci</h2>
-          <p>testowy tekst</p>
+    <div class="main_content_about" id="about">
+       
+      <div data-aos="fade-right" >
+        <p>Hi!<br>
+        MY NAME IS <B>ADRIAN</B></p>
+      </div>
+      <div data-aos="fade-left">
+        <p style="text-align: right;">AND I CREATE WEBSITES</p>
+      </div>
+      <div data-aos="fade-right" >
+        <p>FOR POEPLE</p>
+      </div>   
+      <div data-aos="fade-left" >
+        <p style="text-align: right;">FROM POEPLE</p>
+      </div>
+
+    </div>    
+
+    <div class="main_content_projects" id="projects">
+
+      <div class="project1" data-aos="fade-right">
+
+        <div class="project_img">
+        <img class="projects_photo" src="img/test.png" alt="Privtrade.pl"></div>
+
+          <div class="project_about">
+
+        <div class="project_heading">
+          <h1>PRIVTRADE.PL</h1>
+        </div>
+
+        <div class="project_desc">
+          <p>Pierwszy w pełni zbudowany projekt w którym pełniłem role Front Endu</p>
+
+        </div>
+          </div>
+
+    </div>
+    <div class="project1" data-aos="fade-left">
+
+      <div class="project_img">
+      <img class="projects_photo" src="img/test.png" alt="Privtrade.pl"></div>
+
+        <div class="project_about">
+
+      <div class="project_heading">
+        <h1>Privtrade.pl</h1>
+      </div>
+
+      <div class="project_desc">
+        <p>Pierwszy w pełni zbudowany projekt w którym pełniłem role Front Endu</p>
+
+      </div>
         </div>
         
     </div>
-      
-      <div class="about_me1">
-        <h2 class="title_about1">Hello!</h2>
-        <p class="text_about1">Hi again</p>
     </div>
-    
-    <div class="contact_form">
-      <form method="post" name="contact_form" action="mailto:adrian115185@gmail.com">
-        <label for="email" class="email_placeholder">Email:</label>
-        <input type="email" class="email_input" name="email" minlenght="7" maxlength="50" required>
-        <button type="submit" class="sendEmail">SEND</button>
-      </form>
-    </div>
-    
+
+
+
   </article>
-  
+
   <footer class="footer" id="bottom">
     
     <div class="about">
+     
       <p class="about_text">
-        Copyright NeverSeen &copy 2020
-      </p>
+        Copyright NeverSeenDesign.pl &copy 2020
+      </p><hr>
+      <h4 class="about_text2">Creating with passion for people...</h4>
     </div>
   </footer>
   
-</body>
-</html>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
-</body>
+  </body>
+  <script  src="./script.js"></script>
 </html>
