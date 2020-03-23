@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
 }
 
 :root {
@@ -26,7 +27,7 @@
     background: rgb(210, 210, 210, .7) !important;
 }
 
-body {
+body,html {
     font-family: 'Catamaran', sans-serif;
     background-color: #fff;
 }
@@ -250,9 +251,12 @@ body {
     width: 300px;
     height: 30px;
     color: white;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-left: 2px;
 }
 
-label {
+.contact label {
     position: absolute;
     top: 5px;
     left: 0;
@@ -261,13 +265,21 @@ label {
     user-select: none;
 }
 
-input:focus ~ label,textarea:focus ~ label
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label
 {
-    top: -12px;
+    top: -13px;
     font-size: 12px;
-    color: red;
+    color: #DA4453;
 }
 
+.contact_email:focus,
+.contact_email:not(:placeholder-shown),
+.contact_textarea:focus{
+    border-bottom: 1px solid #DA4453;
+}
 
 input:invalid {
   border: 2px dashed red;
@@ -320,6 +332,16 @@ input:invalid {
 .menu_hamburger,
 .menu_mobile {
     display: none;
+}
+
+.page_up_btn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
 }
 
 @keyframes blink {
