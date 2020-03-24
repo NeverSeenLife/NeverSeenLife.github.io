@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
@@ -11,12 +13,16 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
     <link rel="stylesheet" href="./style.css">
-    <title>NeverSeen</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"> 
+    <title>Just a website creator - NeverSeen</title>
     
 </head>
 
 <body>
-
 
     <div id="loading" class="loading">
         <div class="circle"></div>
@@ -25,10 +31,9 @@
         </div>
     </div>
 
-
     <nav class="menu">
 
-        <a href="#" class="logo">NeverSeen</a>
+        <a href="#" class="logo">NEVERSEEN</a>
 
         <nav class="menu_mobile">
             <button class="hamburger"></button>
@@ -54,122 +59,46 @@
 
 
         </div>
-        
-        <div class="page_up_btn">
-            
+        <div class="page_up">
+            <a href="#"><button class="page_up_btn"><i class="fas fa-angle-up"></i></button>
+            </a>  
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
-
-        </script>
-        <script>
-            $(window).on("load", function() {
-                $(".loading").fadeOut("slow");
-            });
-
         </script>
 
-        <script>
-            $('.loader').counterUp({
-                delay: 15,
-                time: 600
-            });
-
-        </script>
-
-        <script>
-            $(document).on('click', 'ul li', function() {
-                $(this).addClass('m_active').siblings().removeClass('m_active');
-            });
-
-        </script>
-
-        <script>
-            $(function() {
-                $(window).on("scroll", function() {
-                    if ($(window).scrollTop() > 50) {
-                        $(".menu").addClass("active_menu");
-                    } else {
-                        $(".menu").removeClass("active_menu");
-                    }
-                });
-            });
-
-        </script>
     </nav>
 
     <header class="heading">
-        <h1 class="main_heading_text">NEVERSEENDESIGN<span class="ani">_</span></h1>
-        <h3></h3>
+        <h1 class="main_heading_text">Front End Developer<span class="ani">_</span></h1>
+        <h3 class="sec_text ">I create webistes with love</h3>
         <button class="btn_1">CHECK ME</button>
 
         <a href="#about" class="arrowHref"><i class="fas fa-angle-double-down arrow"></i></a>
 
     </header>
 
+    <section>
+
+
+    </section>
+
     <article class="main">
 
         <div class="main_content_about" id="about">
 
-            <div data-aos="fade-right">
-                <p>Hi!<br>
-                    MY NAME IS <B>ADRIAN</B></p>
-            </div>
-            <div data-aos="fade-left">
-                <p style="text-align: right;">AND I CREATE WEBSITES</p>
-            </div>
-            <div data-aos="fade-right">
-                <p>FOR POEPLE</p>
-            </div>
-            <div data-aos="fade-left">
-                <p style="text-align: right;">FROM POEPLE</p>
-            </div>
+            <h2 class="name" data-aos="fade-up"><b>Hi</b>, my name is Adrian</h2>
+
+            <p class="my_desc" data-aos="fade-up">When i was 10 years old i saw my uncle creating a pretty website about his MU online serwer
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat nostrum laborum alias qui. Doloribus, obcaecati repellendus nam saepe, eos excepturi dolor delectus fugiat vitae consectetur dolorem qui praesentium in.
+                Thats why I started everything
+            </p>
 
         </div>
 
         <div class="main_content_projects" id="projects">
 
-            <div class="project1" data-aos="fade-right">
-
-                <div class="project_img">
-                    <img class="projects_photo" src="img/test.png" alt="Privtrade.pl"></div>
-
-                <div class="project_about">
-
-                    <div class="project_heading">
-                        <h1>PRIVTRADE.PL</h1>
-                    </div>
-
-                    <div class="project_desc">
-                        <p>Pierwszy w pełni zbudowany projekt w którym pełniłem role Front Endu</p>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="project1" data-aos="fade-left">
-
-                <div class="project_img">
-                    <img class="projects_photo" src="img/test.png" alt="Privtrade.pl"></div>
-
-                <div class="project_about">
-
-                    <div class="project_heading">
-                        <h1>Privtrade.pl</h1>
-                    </div>
-
-                    <div class="project_desc">
-                        <p>Pierwszy w pełni zbudowany projekt w którym pełniłem role Front Endu</p>
-
-                    </div>
-                </div>
-
-            </div>
         </div>
 
 
@@ -205,9 +134,11 @@
             <hr>
             <h4 class="about_text2">Creating with passion for people...</h4>
         </div>
+
     </footer>
 
 </body>
-<script src="./script.js"></script>
-<script src="https://kit.fontawesome.com/8de50fc6b4.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="js/plugin.js"></script>
+
 </html>

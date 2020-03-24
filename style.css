@@ -53,7 +53,7 @@ body,html {
     font-weight: bold;
     text-decoration: none;
     font-size: 1.7rem;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Righteous', cursive;
     text-shadow: 1px 1px 3px #000000;
     transition: color .5s ease-in-out;
 }
@@ -117,16 +117,15 @@ body,html {
     letter-spacing: 3px;
     white-space: pre;
     color: white;
-    animation: loadingText 2s setps(12);
     z-index: 2;
     font-family: 'Work Sans', sans-serif;
 }
 
 .heading .sec_text {
     color: white;
-    text-align: left;
     font-size: 2rem;
     white-space: pre;
+    text-shadow: 0 0 10px #1a1a1a;
 }
 
 .arrow {
@@ -152,24 +151,39 @@ body,html {
     display: flex;
     flex-direction: column;
     position: relative;
-    border-top: 2px solid white;
 }
 
 .main_content_about {
     width: 100%;
     margin: auto;
     color: #1a1a1a;
-    background-color: white;
-    min-height: 100vh;
-    padding: 100px 200px;
+    background-color: #ffffff;
+    min-height: 50vh;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 0px;
 }
 
-.main_content_about p {
-    font-size: 4rem;
+.main_content_about .name{
+    font-size: 3rem;
 }
 
-.main_content_about p::first-line {
-    font-size: 7rem;
+.my_desc{
+    font-size: 1.2rem;
+    padding: 40px 0px;
+    width: 50%;
+    text-align: justify;
+}
+
+.my_desc:first-letter{
+    color: #2f3640;
+    float: left;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 6px;
+    padding-right: 8px;
 }
 
 .main_content_projects {
@@ -256,6 +270,11 @@ body,html {
     padding-left: 2px;
 }
 
+.contact_textarea{
+    resize: none;
+    height: 120px;
+}
+
 .contact label {
     position: absolute;
     top: 5px;
@@ -334,14 +353,61 @@ input:invalid {
     display: none;
 }
 
-.page_up_btn{
+.page_up{
     position: fixed;
     bottom: 50px;
     right: 50px;
     width: 50px;
     height: 50px;
+    cursor: pointer;
+    transition: all .3s;
+    animation: slideRight .7s both ease-in-out;
+    display: none;
+}
+
+.page_up_btn{
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    border: 0;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    overflow: hidden;
+}
+.page_up a{
+    text-decoration: none;
+}
+.page_up_btn i{
+    color: white;
+    font-size: 38px;
+    transition: transform .3s;
+}
+
+.page_up_btn:hover{
+    background: #2c3e50;
+}
+
+.page_up_btn:hover i{
+    transform: scale(1.2);
+}
+
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(200%);
+    }
+    50%{
+        transform: translateX(-20%);
+    }
+    100%{
+        transform: translate(0);
+    }
 }
 
 @keyframes blink {
@@ -350,11 +416,6 @@ input:invalid {
     }
 }
 
-@media (max-width: 900px) {
-    .heading .main_heading_text {
-        font-size: 2rem;
-    }
-}
 
 @media (max-width: 768px) {
     .menu .nav {
@@ -454,6 +515,42 @@ input:invalid {
     .menu_hamburger .nav_mobile .nav_mobile_a:hover {
         color: #666;
     }
+
+    .heading .main_heading_text{
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+
+    .heading .sec_text{
+        font-size: 1.2rem;
+    }
+
+    .main_content_about{
+        min-height: 100vh;
+    }
+
+    .main_content_about .name{
+        font-size: 2rem;
+    }
+
+
+
+
+    .main_content_about .my_desc{
+        font-size: 1rem;
+        
+        width: 90%;
+    }
+
+    .page_up{
+        visibility: hidden;
+    }    
+
+    .footer .about .about_text{
+        font-size: 1rem;
+    }
+
+
 }
 
 input {
