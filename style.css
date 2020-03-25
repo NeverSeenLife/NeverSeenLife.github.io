@@ -196,40 +196,105 @@ body,html {
     flex-direction: column;
 }
 
-.project1 {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 3px .5px #dfdfdf;
-    margin-bottom: 250px;
+.container_skills{
+    width: 500px;
+    padding: 20px;
+    margin: 50px auto 0;
 }
 
-.project_img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 250px;
+.skill_lists{
+    position: relative;
+    font-weight: 500;
+    text-transform: uppercase;
+    list-style-type: none;
+    margin: 50px 0;
 }
 
-.project_heading {
-    font-size: 3rem;
-    padding: 30px;
-}
-
-
-
-.projects_photo {
-    object-fit: cover;
-    width: 300px;
-    height: 150px;
+.skill_lists::before{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #40739e;
+    border-radius: 1000px;
 }
 
 
+.skill_lists::after{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: #00a8ff;
+    border-radius: 1000px;
+}
 
+.skill_lists.html:after{
+    animation: skill-html 3s forwards ease;
+}
 
+@keyframes skill-html{
+    to{
+        width: 90%;
+    }
+}
+
+.skill_lists.css:after{
+    animation: skill-css 3s forwards ease;
+}
+
+@keyframes skill-css{
+    to{
+        width: 75%;
+    }
+}
+
+.skill_lists.js:after{
+    animation: skill-js 3s forwards ease;
+}
+
+@keyframes skill-js{
+    to{
+        width: 35%;
+    }
+}
+
+.skill_lists.react:after{
+    animation: skill-react 3s forwards ease;
+}
+
+@keyframes skill-react{
+    to{
+        width: 10%;
+    }
+}
+
+.pulse:hover {
+    -webkit-animation-name: pulse;
+    animation: pulse 1.5s infinite;
+    cursor: default;
+  }
+
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
 
 
 .contact_form {
@@ -307,14 +372,14 @@ input:invalid {
 
 .contact_send{
     width: 200px;
-    height: 30px;
+    height: 35px;
     color: white;
     background: transparent;
-    border: 1px solid;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     text-transform: uppercase;
     font-family: fantasy;
-    font-size: 12px;
+    font-size: 14px;
     transition: all .7s ease-in-out;
 }
 .contact_send:hover{
