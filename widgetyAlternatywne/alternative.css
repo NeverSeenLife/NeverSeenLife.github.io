@@ -23,6 +23,7 @@ body{
 .header p{
     font-size: 30px;
     font-weight: bold;
+    color: white;
 }
 
 .main{
@@ -83,6 +84,7 @@ body{
 }
 .footer p{
     font-size: 20px;
+    color: white;
 }
 
 
