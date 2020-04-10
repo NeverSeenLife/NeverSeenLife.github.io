@@ -21,7 +21,7 @@ body{
 }
 
 .header p{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     color: white;
 }
@@ -37,6 +37,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.te1{
+    font-size: 32px;
+}
+
+.te2{
+    font-size: 29px;
 }
 
 .mi{
@@ -63,7 +71,7 @@ body{
     position: absolute;
     bottom: 10px;
     left: 135px;
-    font-size: 32px;
+    font-size: 35px;
     color: white;
     margin: auto;
 }
@@ -83,7 +91,7 @@ body{
     justify-content: center;
 }
 .footer p{
-    font-size: 20px;
+    font-size: 30px;
     color: white;
 }
 
