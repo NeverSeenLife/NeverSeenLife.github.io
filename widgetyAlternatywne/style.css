@@ -29,13 +29,14 @@ body{
     display: flex;
 }
 
-.left,.right{
+.left,.right,.widget1{
     color: white;
-    width: 50%;
+    width: 33%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .mi{
@@ -65,6 +66,13 @@ body{
     font-size: 32px;
     color: black;
     margin: auto;
+}
+
+.widget1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .zdj:hover{
