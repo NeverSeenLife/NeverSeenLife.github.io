@@ -6,7 +6,9 @@
 }
 
 body{
-    min-height: 200vh;
+    min-height: 150vh;
+    background: url(https://images.unsplash.com/photo-1449182325215-d517de72c42d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1317&q=80);
+    background-size: cover;
 }
 
 
@@ -42,21 +44,21 @@ ul a {
 ul li a:hover {
     background-color: #c0c0c0;
     transform: translateX(5%);
-
 }
 
 .bok{
     padding-top: 30px;
-    width: 20%;
+    width: 350px;
     height: 100%;   
     background: black;
     position: fixed;
+    display: flex;
     top: 0;
 }
 
 .pasek {
     width: 100%;
-    height: 50px;
+    height: 80px;
     background: black;
     display: flex;
     align-items: center;
@@ -66,21 +68,29 @@ ul li a:hover {
 .pas {
     color: white;
     font-size: 30px;
+    margin-left: 350px;
 }
 
 #test{
+    margin-left: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 1000px;
     font-size: 38px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
 }
 #test2{
     text-align: center;
+    padding-top: 30px;
+    
+    margin-left: 350px;
 }
 
 footer h2{
     text-align: center;
+    margin-left: 350px;
+    color: white;
 }
