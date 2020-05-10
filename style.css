@@ -71,20 +71,36 @@ body,html {
 
 .menu .nav .nav_menu {
     margin-left: 35px;
+    overflow: hidden;
 }
 
 .menu .nav .nav_menu .nav_menu_a {
     text-decoration: none;
     color: white;
     transition: all ease .3s;
+    position: relative;
+    cursor: pointer;
 }
 
-.menu .nav .nav_menu .nav_menu_a:hover {
-    border-bottom: 1px solid white;
+.menu .nav .nav_menu .nav_menu_a:hover::after{
+    transform: translate(0%);
+}
+
+.menu .nav .nav_menu .nav_menu_a::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0px;
+    height: 1px;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out;
 }
 
 .menu .m_active {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff;
 }
 
 .active_menu {
@@ -187,91 +203,30 @@ body,html {
 }
 
 .main_content_projects {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     margin: auto;
     background-color: whitesmoke;
-    padding: 100px 200px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.container_skills{
-    width: 500px;
-    padding: 20px;
-    margin: 50px auto 0;
-}
-
-.skill_lists{
-    position: relative;
-    font-weight: 500;
-    text-transform: uppercase;
-    list-style-type: none;
-    margin: 50px 0;
-}
-
-.skill_lists::before{
-    content: "";
+.contaienr_about{
     position: absolute;
-    top: calc(100% + 10px);
-    left: 0;
-    width: 100%;
-    height: 15px;
-    background-color: #40739e;
-    border-radius: 1000px;
+    bottom: 85%;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.10);
 }
 
 
-.skill_lists::after{
-    content: "";
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 0;
-    width: 0;
-    height: 15px;
-    background-color: #00a8ff;
-    border-radius: 1000px;
-}
-
-.skill_lists.html:after{
-    animation: skill-html 3s forwards ease;
-}
-
-@keyframes skill-html{
-    to{
-        width: 90%;
-    }
-}
-
-.skill_lists.css:after{
-    animation: skill-css 3s forwards ease;
-}
-
-@keyframes skill-css{
-    to{
-        width: 75%;
-    }
-}
-
-.skill_lists.js:after{
-    animation: skill-js 3s forwards ease;
-}
-
-@keyframes skill-js{
-    to{
-        width: 35%;
-    }
-}
-
-.skill_lists.react:after{
-    animation: skill-react 3s forwards ease;
-}
-
-@keyframes skill-react{
-    to{
-        width: 10%;
-    }
-}
 
 .pulse:hover {
     -webkit-animation-name: pulse;
@@ -364,11 +319,6 @@ textarea:not(:placeholder-shown) + label
 .contact_textarea:focus{
     border-bottom: 1px solid #DA4453;
 }
-
-input:invalid {
-  border: 2px dashed red;
-}
-
 
 .contact_send{
     width: 200px;
@@ -468,7 +418,7 @@ input:invalid {
         transform: translateX(200%);
     }
     50%{
-        transform: translateX(-20%);
+        transform: translateX(-40%);
     }
     100%{
         transform: translate(0);
@@ -644,11 +594,13 @@ input {
     color: white;
     font-size: 1.2rem;
     box-shadow: 0 0 10px 3px #1a1a1a;
+    border-radius: 10px;
 }
 
 .btn_1:hover {
     cursor: pointer;
     z-index: 1;
+    color: black;
 }
 
 .btn_1:hover::before {
@@ -669,7 +621,7 @@ input {
     height: 50px;
     width: 150px;
     border: 0;
-    background: linear-gradient(to left, #DA4453, #89216B);
+    background: white
 }
 
 .btn_1::after {
@@ -682,7 +634,7 @@ input {
     height: 50px;
     width: 150px;
     border: 0;
-    background: linear-gradient(to left, #DA4453, #89216B);
+    background: white
 }
 
 

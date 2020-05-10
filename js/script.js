@@ -9,3 +9,8 @@ const hamburger = document.querySelector('.hamburger');
             hamburger.classList.toggle("open");
             menu.classList.toggle("start");
         })
+
+        document.getElementById('desc').onkeyup = function() {
+            document.getElementById('ile').innerHTML = "Pozostało znaków: " + (500 - this.value.length);
+        };
+        

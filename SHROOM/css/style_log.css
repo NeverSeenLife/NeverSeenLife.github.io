@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontNormal;
+    src: url(../fonts/Manrope-VariableFont_wght.ttf);
+}
+
+body{
+    font-family: fontNormal;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.loading_screen{
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading_circle{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #000000;
+    border-top: 3px solid grey;
+    border-radius: 50%;
+    animation: circleLoad .7s 10 linear;
+}
+
+
+.login_System{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_left{
+    margin-right: 50px;
+}
+
+.back_frame{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    position: none;
+    user-select: none;
+}
+
+.video_call_svg{
+    width: 500px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-pointer-events: none;
+}
+
+.login_Form{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.login_Input,.password_Input{
+    width: 350px;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding-left: 3px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #dcdde1;
+    transition: border 0.3s ease;
+}
+.login_Input:focus,.password_Input:focus{
+    border-bottom: 2px solid #7f8fa6;
+}
+
+.submit_Input{
+    width: 350px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.submit_Input:hover{
+    background: #dcdde1;
+}
+
+.login,.pass{
+    position: relative;
+}
+
+.loginLabel,.passLabel{
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.login_Input:focus + .loginLabel,
+.password_Input:focus + .passLabel,
+.login_Input:not(:placeholder-shown) + .loginLabel,
+.password_Input:not(:placeholder-shown) + .passLabel{
+    top: -20px;
+    font-size: 12px;
+}
+
+.showPass{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+    user-select: none;
+}
+.showPass:active{
+    color: #40739e;
+}
+
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_copy{
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+@keyframes circleLoad{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+}
