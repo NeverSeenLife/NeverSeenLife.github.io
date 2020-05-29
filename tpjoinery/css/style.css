@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+}
+
+:root {
+    scrollbar-color: #13243a #000000 !important;
+    scrollbar-width: thin !important;
+}
+
+body,html{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000000;
+}
+
+.main_header{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .4);
+}
+
+.main_header .logo{
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+    font-size: 24px;
+}
+
+.main_header .main_navigation{
+    margin-right: 50px;
+    list-style: none;
+}
+.main_header .main_navigation .nav_a{
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+}
+
+.center_text{
+    background: rgba(0, 0, 0, .8);
+    text-transform: uppercase;
+    font-size: 34px;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px;
+}
+
+.main .about_us .about_text{
+    color: white;
+    font-size: 24px;
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: 50px;
+}
+.footer_all{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
