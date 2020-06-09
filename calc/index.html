@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Projekt Kalkulator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+  <div class="calc">
+    <h1 class="word1">Kalkulator</h1>
+    <div class="calc_counter">
+      <input type="number" placeholder="0" minlength="1" class="calc_value" id="inputValue" />
+    </div>
+
+    <div class="calc_buttons">
+      <div class="bar1">
+        <button class="bar" onclick="ustawOperacje('+')">+</button>
+        <button class="bar" onclick="ustawOperacje('-')">-</button>
+        <button class="bar" onclick="ustawOperacje('*')">*</button>
+        <button class="bar" onclick="ustawOperacje('/')">/</button>
+      </div>
+
+      <div class="bar2">
+        <button class="bar" onclick="ustawPrzycisk('1')">1</button>
+        <button class="bar" onclick="ustawPrzycisk('2')">2</button>
+        <button class="bar" onclick="ustawPrzycisk('3')">3</button>
+        <button onclick="czysc()" class="bar" style="font-size: 16px;">Wyczyść</button>
+      </div>
+      <div class="bar3">
+        <button class="bar" onclick="ustawPrzycisk('4')">4</button>
+        <button class="bar" onclick="ustawPrzycisk('5')">5</button>
+        <button class="bar" onclick="ustawPrzycisk('6')">6</button>
+        <button class="bar" id="dark" onclick="theme()">Dark</button>
+      </div>
+      <div class="bar4">
+        <button class="bar" onclick="ustawPrzycisk('7')">7</button>
+        <button class="bar" onclick="ustawPrzycisk('8')">8</button>
+        <button class="bar" onclick="ustawPrzycisk('9')">9</button>
+        <button class="bar" onclick="ustawPrzycisk('.')">.</button>
+      </div>
+      <div class="bar5">
+        <button onclick="ustawPrzycisk('0')" class="bar zero">0</button>
+        <button onclick="wynik()" class="bar zero">=</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <h1>Adrian Kaja 3K</h1>
+  </footer>
+</body>
+
+<script>
+  var operacja = "";
+  var pierwszaLiczba = "";
+  var drugaLiczba = "";
+
+  function ustawOperacje(znak) {
+    drugaLiczba = "";
+    operacja = znak;
+    document.querySelector(".calc_value").value = 0;
+  }
+
+  function wynik() {
+    pierwszaLiczba = eval(pierwszaLiczba + operacja + drugaLiczba);
+
+    operacja = "";
+    document.querySelector(".calc_value").value = pierwszaLiczba;
+  }
+
+  function ustawPrzycisk(znak) {
+    if (operacja == ""){
+      pierwszaLiczba += znak;
+      document.querySelector(".calc_value").value = parseFloat(pierwszaLiczba);
+    } else{
+      drugaLiczba += znak;
+      document.querySelector(".calc_value").value = parseFloat(drugaLiczba);
+    }
+  }
+
+  function czysc() {
+    document.querySelector(".calc_value").value = 0;
+    operacja = "";
+    pierwszaLiczba = "";
+    drugaLiczba = "";
+  }
+
+  function theme() {
+    const back = document.querySelector(".calc");
+    const input = document.querySelector(".calc_value");
+    const bar = document.getElementsByClassName("bar");
+    back.classList.toggle('black_theme');
+    input.classList.toggle('black_theme_input');
+    for(var i=0; i< bar.length;i++){
+      bar[i].classList.toggle('black_bar');
+    }
+
+  }
+</script>
+</html>
