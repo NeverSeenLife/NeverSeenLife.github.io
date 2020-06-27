@@ -45,7 +45,6 @@ body,html{
     align-items: center;
     background: #ffffff;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .4);
-    
 }
 
 .main_header .logo{
@@ -75,23 +74,51 @@ body,html{
 }
 
 .main_btn{
-    width: 250px;
+    width: 280px;
     height: 50px;
-    background: #000000;
+    background: #e38838;
     color: #ffffff;
     font-size: 24px;
     border: none;
     cursor: pointer;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .4);
+    transition: all .3s ease-in-out;
+    position: absolute;
+    overflow: hidden;
+    left: 182px;
+    top: 560px;
+}
+
+.main_btn::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 280px;
+    height: 50px;
+    transition: all .3s ease-in-out;
+    background: #fb5200;
+    top: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+}
+
+.main_btn:hover::before {
+    transform: translateX(0%);
+}
+
+.main_btn:hover{
+    z-index: 1;
 }
 
 .center_text{
-    background: #ffffff;
-    text-transform: uppercase;
-    font-size: 34px;
-    padding: 20px;
-    color: #1a1a1a;
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .4);
+    font-size: 80px;
+    color: #fff;
+    position: absolute;
+    left: 175px;
+    letter-spacing: 11px;
+    text-shadow: 2px 2px 4px #2f2f2f;
+    top: 175px;
+    white-space: nowrap;
 }
 
 .main{
@@ -201,9 +228,30 @@ footer{
     color: #ffffff;
 }
 
+.footer_navigation{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    padding: 20px;
+    background-color: #2f2f2f;
+}
+
 .hamburger {
     font-size: 30px;
     display: none;
+}
+
+.nav_footer{
+    color: #ffffff;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+.nav_footer:hover{
+    color: #000000;
 }
 
 button {

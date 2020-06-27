@@ -18,13 +18,14 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
   <meta name="theme-color" content="#fafafa">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8de50fc6b4.js" crossorigin="anonymous"></script>
-</head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head> 
 
 <body>
 
   <header class="main_header">
-    .
     <nav class="main_nav">
       
       <a href="#" class="logo"><img src="img/logo.png" alt="logo" style="width: 50px;"></a>
@@ -40,30 +41,27 @@
       <button class="hamburger"></button>
     </nav>
 
-    <h1 class="center_text">
-      TP Joinery Services Dundee
+    <h1 class="center_text" data-aos="fade-up">
+      TP Joinery<br>Services<br>Dundee
     </h1>
     <button onclick="location.href='#work'" class="main_btn">CHECK US</button>
-
 
   </header>
 
   <section class="main">
-    <div class="about_us">
+    <div class="about_us" data-aos="fade-up">
       <h1>We are a local company offering services such as</h1>
       <p class="about_text">  
         Kitchens, Bathrooms, Doors,<br>
         Windows, Wardrobes, Fencing, <br>
         Decking and much more. <br>
         No job too small. <br>
-        <b>Call us for free quotation</b><Br>
-        <b>+44 7936 700935</b>
       </p>
     </div>
     
     
 
-      <div class="photos" id="work">
+      <div class="photos" data-aos="fade-up" id="work" data-aos="fade-up">
         <h1>Our work</h1>
         <div class="photos_row">
           <img src="img/photo01.jpg" alt="">
@@ -83,14 +81,15 @@
 
   <section class="scroll">
 
-    <p>Check our fb</p>
+    <p style="text-align: center;" data-aos="fade-up">Call us for free quotation<br>
+      +44 7936 700935</p>
 
   </section>
  
   <section class="main">
       <h1>Opinions</h1>
       
-      <div class="opinions">
+      <div class="opinions" data-aos="fade-up">
 
         <div class="opinionList">
           <i class="fas fa-users client"></i>
@@ -100,7 +99,7 @@
           <i class="fas fa-users client"></i>
           <p>Fantastic service. Job done to a very high standard. No issues just cracked on and did a wonderful job. Would recommend to anyone. Will be using again for sure. Would not use anyone other than TP Joinery Services. Thank You Tomasz.</p>
         </div>
-        <div class="opinionList">
+        <div class="opinionList" >
           <i class="fas fa-users client"></i>
           <p>I highly recommend tomasz and his team They were very fast workers and everything clean and tidy after the completed job
             My wardrobes are lovely like them very much.Thank you very much.</p>
@@ -116,13 +115,14 @@
   <footer>
 
     <div class="first_footer">
-      <ul class="main_navigation">
+      <ul class="footer_navigation">
         
-        <li><a class="nav_a first" href="#">Start</a></li>
-        <li><a class="nav_a" href="#work">Our work</a></li>
-        <li><a class="nav_a" href="">Gallery</a></li>
-        <li><a class="nav_a" href="contact.html">Contact</a></li>
-        
+        <li><a class="nav_footer" href="#">Start</a></li>
+        <li><a class="nav_footer" href="#work">Our work</a></li>
+        <li><a class="nav_footer" href="">Gallery</a></li>
+        <li><a class="nav_footer" href="contact.html">Contact</a></li>
+        <li><a class="nav_footer" href="#">Up</a></li>
+
       </ul>
 
     </div>
@@ -134,9 +134,9 @@
 
     </div>
   </footer>
-
-
-
+  <script>
+    AOS.init();
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>
