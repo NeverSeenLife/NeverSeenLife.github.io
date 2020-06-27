@@ -52,19 +52,26 @@ body,html{
     color: white;
     margin-left: 50px;
     font-size: 24px;
+    user-select: none;
 }
 
 .main_header .main_navigation{
-    margin-right: 50px;
     list-style: none;
     display: flex;
+    margin-right: 50px;
 }
+
 .main_header .main_navigation .nav_a{
     text-decoration: none;
     color: #1a1a1a;
-    margin-left: 50px;
-    transition: all .3s ease-in-out;
+    margin-left: 20px;
+    transition: all .5s ease-in-out;
     cursor: pointer;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -76,7 +83,7 @@ body,html{
 .main_btn{
     width: 280px;
     height: 50px;
-    background: #e38838;
+    background: #84754e;
     color: #ffffff;
     font-size: 24px;
     border: none;
@@ -96,7 +103,7 @@ body,html{
     width: 280px;
     height: 50px;
     transition: all .3s ease-in-out;
-    background: #fb5200;
+    background: #754c30;
     top: 0;
     z-index: -1;
     transform: translateX(-100%);
@@ -212,6 +219,39 @@ body,html{
     margin: 20px;
 }
 
+.page_up{
+    position: fixed;
+    display: none;
+    right: 50px;
+    bottom: 30px;
+    width: 48px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    height: 48px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    animation: arrow .7s both ease-in-out;
+}
+
+.page_up a{
+    font-size: 32px;
+    height: 48px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all .6s ease-in-out;
+}
+
+.page_up:hover{
+    background: #3f3e3e;
+    
+}
+.page_up a:hover{
+    transform: rotate(360deg)
+}
+
 footer{
     width: 100%;
     height: 50px;
@@ -261,6 +301,10 @@ button {
 }
 .active_menu{
     height: 55px;
+}
+
+.galPhoto{
+    cursor: pointer;
 }
 
 
@@ -352,5 +396,17 @@ button {
     .main_navigation li .nav_a.first{
         background: #000000;
         color: #ffffff;
+    }
+}
+
+@keyframes arrow {
+    0%{
+        transform: translateY(200%);
+    }
+    50%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translate(0);
     }
 }
