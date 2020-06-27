@@ -7,9 +7,11 @@
     scroll-behavior: smooth;    
 }
 
-:root {
-    scrollbar-color: #13243a #000000 !important;
-    scrollbar-width: thin !important;
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1;
 }
 
 body,html{
@@ -20,7 +22,7 @@ body,html{
 .main_header{
     width: 100%;
     min-height: 100vh;
-    background: url(../img/background.jpg) no-repeat;
+    background: url(../img/backgroundDark.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -33,13 +35,17 @@ body,html{
 .main_nav{
     position: fixed;
     top: 0;
+    transition: all .3s ease-in-out;
     width: 100%;
-    height: 80px;
+    height: 75px;
+    z-index: 999;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, .4);
+    background: #ffffff;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .4);
+    
 }
 
 .main_header .logo{
@@ -52,20 +58,40 @@ body,html{
 .main_header .main_navigation{
     margin-right: 50px;
     list-style: none;
+    display: flex;
 }
 .main_header .main_navigation .nav_a{
     text-decoration: none;
-    color: white;
+    color: #1a1a1a;
     margin-left: 50px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.main_header .main_navigation .nav_a:hover{
+    color: #ffffff;
+    background: #000000;
+}
+
+.main_btn{
+    width: 250px;
+    height: 50px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .4);
 }
 
 .center_text{
-    background: rgba(0, 0, 0, .8);
+    background: #ffffff;
     text-transform: uppercase;
     font-size: 34px;
     padding: 20px;
-    color: white;
-    border-radius: 10px;
+    color: #1a1a1a;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .4);
 }
 
 .main{
@@ -73,15 +99,91 @@ body,html{
     min-height: 100vh;
     text-align: center;
     padding: 50px;
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
 .main .about_us .about_text{
-    color: white;
+    color: #1a1a1a;
     font-size: 24px;
+    text-align: justify;
+    text-align-last: center;
 }
 
+.photos{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.photos .photos_row{
+    
+    justify-content: center;
+}
 
+.photos .photos_row img{
+    width: 350px;
+    height: 250px;
+    margin: 20px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .2);
+    object-fit: cover;
+}
+.photos .photos_row img:hover{
+    transform: scale(120%);
+}
+
+.scroll{
+    width: 100%;
+    background-image: url(../img/photo01.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    overflow: hidden;
+    color: #ffffff;
+}
+.scroll p{
+    background-color: rgba(0, 0, 0, .5);
+    padding: 180px 555px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.opinions{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: row;
+}
+.client{
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.opinionList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: justify;
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    padding: 20px;
+}
+
+.fb{
+    color: royalblue;
+    font-size: 64px;
+    margin: 20px;
+}
 
 footer{
     width: 100%;
@@ -94,4 +196,113 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.footer_text{
+    color: #ffffff;
+}
+
+.hamburger {
+    font-size: 30px;
+    display: none;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #ffffff;
+}
+.active_menu{
+    height: 55px;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 50px;
+        cursor: pointer;
+        width: 32px;
+        height: 30px;
+        border-top: 5px solid #000000;
+        background: transparent;
+        transition: 0.3s transform linear;
+        z-index: 200;
+    }
+
+    .hamburger:focus {
+        outline: 0;
+        background: none;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-top: 5px solid #000000;
+        transform: translateY(6px);
+    }
+
+    .hamburger::after {
+        transform: translateY(16px);
+        transition: 0.3s transform linear;
+    }
+
+    .hamburger.open {
+        position: fixed;
+        transform: rotate(45deg) translateY(10px);
+        border: none;
+    }
+
+
+    .hamburger.open::after {
+        border-top: 5px solid #000000;
+        transform: rotate(-90deg) translateX(-6px);
+    }
+
+    .hamburger.open::before {
+        border-top: 5px solid #000000;
+    }
+    .main_header .main_navigation{
+        position: absolute;
+        user-select: none;
+        justify-content: center;
+        z-index: -100;
+        margin: auto;
+        flex-direction: column;
+        width: 100%;
+        top: -200px;
+        height: 200px;
+        background: #ffffff;
+        transition: transform .3s ease-in-out;
+        border-bottom: 1px solid #1a1a1a;
+        padding-top: 75px ;
+    }
+    .main_header .main_navigation .nav_a{
+        margin: auto;
+        font-size: 18px;
+        padding: 2px 30px;
+        width: 100%;
+        text-align: center;
+    }
+    .main_header .main_navigation li{
+        display: flex;
+        width: 250px;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .main_header .main_navigation.active{
+        transform: translateY(200px);
+    }
+    
+    .main_navigation li .nav_a.first{
+        background: #000000;
+        color: #ffffff;
+    }
 }

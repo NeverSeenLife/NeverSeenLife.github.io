@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <title>Just a website creator - NeverSeen</title>
+
+</head>
+
+<body>
+
+    <div id="loading" class="loading">
+        <div class="circle"></div>
+        <div class="load">
+            <p class="loader">100</p><span>%</span>
+        </div>
+    </div>
+
+    <nav class="menu">
+
+        <a href="#" class="logo">NEVERSEEN</a>
+
+        <nav class="menu_mobile">
+            <button class="hamburger"></button>
+        </nav>
+
+        <ul class="nav">
+            <li class="nav_menu m_active"><a href="#" class="nav_menu_a">Home</a></li>
+            <li class="nav_menu"><a href="#about" class="nav_menu_a">About</a></li>
+            <li class="nav_menu"><a href="#projects" class="nav_menu_a">Projects</a></li>
+            <li class="nav_menu"><a href="#pricing" class="nav_menu_a">Pricing</a></li>
+            <li class="nav_menu"><a href="#contact" class="nav_menu_a">Contact</a></li>
+        </ul>
+
+        <div class="menu_hamburger">
+
+            <ul class="nav_mobile">
+                <li class="nav_mobile_li m_active"><a href="#" class="nav_mobile_a">Home</a></li>
+                <li class="nav_mobile_li"><a href="#about" class="nav_mobile_a">About</a></li>
+                <li class="nav_mobile_li"><a href="#projects" class="nav_mobile_a">Projects</a></li>
+                <li class="nav_mobile_li"><a href="#pricing" class="nav_mobile_a">Pricing</a></li>
+                <li class="nav_mobile_li"><a href="#contact" class="nav_mobile_a">Contact</a></li>
+            </ul>
+
+
+        </div>
+        <div class="page_up">
+            <a href="#"><button class="page_up_btn"><i class="fas fa-angle-up"></i></button>
+            </a>
+        </div>
+
+        <script>
+            AOS.init();
+        </script>
+
+    </nav>
+
+    <header class="heading">
+        <h1 data-aos="fade-up" class="main_heading_text">Front End Developer<span class="ani">_</span></h1>
+        <h3 data-aos="fade-down" class="sec_text pulse">I create webistes with love</h3 data-aos="fade-left">
+        <button onclick="location.href='#about'" class="btn_1" data-aos="fade-left">CHECK ME</button>
+
+        <a href="#about" class="arrowHref"><i class="fas fa-angle-double-down arrow"></i></a>
+
+    </header>
+
+    <article class="main">
+
+        <div class="main_content_about" id="about">
+
+            <h2 class="name" data-aos="fade-up"><b>Hi</b>, my name is Adrian</h2>
+
+            <p class="my_desc" data-aos="fade-up">When i was 10 years old i saw my uncle creating a pretty website about
+                his MU online serwer
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat nostrum laborum alias qui.
+                Doloribus, obcaecati repellendus nam saepe, eos excepturi dolor delectus fugiat vitae consectetur
+                dolorem qui praesentium in.
+                Thats why I started everything
+            </p>
+
+        </div>
+
+        <div class="main_content_projects" id="projects">
+
+
+
+            <div class="contaienr_about" data-aos="fade-down">
+
+                <h1>What i use?</h1>
+
+                <ul>
+                    <li> <i class="fab fa-html5"></i></li>
+                    <li> <i class="fab fa-css3-alt"></i></li>
+                    <li> <i class="fab fa-js-square"></i></li>
+                    <li> <i class="fab fa-react"></i></li>
+                </ul>
+            
+            </div>
+
+
+
+        </div>
+
+        <section class="projects">
+
+            <div class="my_recent_projects" data-aos="fade-down">
+                <h1>My work</h1>
+
+
+            </div>
+
+        </section>
+
+        <div class="contact_form" id="contact" data-aos="flip-up">
+
+            <h1>Contact me</h1>
+
+            <form action="#" method="post" class="contact">
+                <div class="container_email">
+                    <input type="text" class="contact_email" name="email" placeholder=" ">
+                    <label for="contact_email">Email:</label>
+                </div>
+                <div class="container_text">
+                    <textarea class="contact_textarea" id="desc" placeholder=" "></textarea>
+                    <label for="contact_textarea">Text here:</label>
+                    <span id="ile">Pozostało znaków: 500</span>
+                </div>
+
+                <input type="submit" value="SEND" class="contact_send">
+            </form>
+
+        </div>
+
+
+    </article>
+
+
+    <footer class="footer" id="bottom">
+
+        <div class="about">
+
+            <p class="about_text">
+                Copyright NeverSeenDesign.pl &copy 2020
+            </p>
+            <hr>
+            <h4 class="about_text2">Creating with passion for people...</h4>
+        </div>
+
+    </footer>
+
+</body>
+<script src="js/script.js"></script>
+<script src="js/plugin.js"></script>
+
+</html>

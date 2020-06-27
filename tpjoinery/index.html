@@ -6,7 +6,6 @@
   <title>TP Joinery Services Dundee</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,36 +13,37 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
-
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
-
   <meta name="theme-color" content="#fafafa">
+  <script src="https://kit.fontawesome.com/8de50fc6b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <header class="main_header">
-
+    .
     <nav class="main_nav">
-      <a href="#" class="logo">TP Joinery</a>
+      
+      <a href="#" class="logo"><img src="img/logo.png" alt="logo" style="width: 50px;"></a>
 
       <ul class="main_navigation">
-        <li>
-          <a class="nav_a" href="#">Start</a>
-          <a class="nav_a" href="#">My work</a>
-          <a class="nav_a" href="price.html">Pricing</a>
-          <a class="nav_a" href="contact.html">Contact</a>
-        </li>
+        
+        <li><a class="nav_a first" href="#">Start</a></li>
+        <li><a class="nav_a" href="#work">Our work</a></li>
+        <li><a class="nav_a" href="">Gallery</a></li>
+        <li><a class="nav_a" href="contact.html">Contact</a></li>
+        
       </ul>
-
+      <button class="hamburger"></button>
     </nav>
 
     <h1 class="center_text">
       TP Joinery Services Dundee
     </h1>
-    <button><a href="#">Check us!</a></button>
+    <button onclick="location.href='#work'" class="main_btn">CHECK US</button>
 
 
   </header>
@@ -56,13 +56,78 @@
         Windows, Wardrobes, Fencing, <br>
         Decking and much more. <br>
         No job too small. <br>
-        <b>Call us for free quotation.</b>
+        <b>Call us for free quotation</b><Br>
+        <b>+44 7936 700935</b>
       </p>
     </div>
+    
+    
+
+      <div class="photos" id="work">
+        <h1>Our work</h1>
+        <div class="photos_row">
+          <img src="img/photo01.jpg" alt="">
+          <img src="img/photo02.jpg" alt="">
+          <img src="img/photo03.jpg" alt="">
+        </div>
+
+        <div class="photos_row">
+          <img src="img/photo04.jpg" alt="">
+          <img src="img/photo05.jpg" alt="">
+          <img src="img/photo06.jpg" alt="">
+        </div>
+  
+      </div>
 
   </section>
 
+  <section class="scroll">
+
+    <p>Check our fb</p>
+
+  </section>
+ 
+  <section class="main">
+      <h1>Opinions</h1>
+      
+      <div class="opinions">
+
+        <div class="opinionList">
+          <i class="fas fa-users client"></i>
+          <p>I had a newly fitted kitchen and wall taken down into the living/dining room. Top class professional and friendly service. Nothing was too much trouble and the finish on everything was 100%. I will definetly use again!!</p>
+        </div>
+        <div class="opinionList">
+          <i class="fas fa-users client"></i>
+          <p>Fantastic service. Job done to a very high standard. No issues just cracked on and did a wonderful job. Would recommend to anyone. Will be using again for sure. Would not use anyone other than TP Joinery Services. Thank You Tomasz.</p>
+        </div>
+        <div class="opinionList">
+          <i class="fas fa-users client"></i>
+          <p>I highly recommend tomasz and his team They were very fast workers and everything clean and tidy after the completed job
+            My wardrobes are lovely like them very much.Thank you very much.</p>
+        </div>
+      </div>
+
+      <a class="fb" href="https://www.facebook.com/TPJoineryServices/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+      <a class="fb" href="https://www.facebook.com/TPJoineryServices/"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      <a class="fb" href="https://www.facebook.com/TPJoineryServices/"><i class="fas fa-phone-square-alt" aria-hidden="true"></i></a>
+
+
+  </section>
   <footer>
+
+    <div class="first_footer">
+      <ul class="main_navigation">
+        
+        <li><a class="nav_a first" href="#">Start</a></li>
+        <li><a class="nav_a" href="#work">Our work</a></li>
+        <li><a class="nav_a" href="">Gallery</a></li>
+        <li><a class="nav_a" href="contact.html">Contact</a></li>
+        
+      </ul>
+
+    </div>
+
+
     <div class="footer_all">
 
       <p class="footer_text">@ 2020 TP Joinery Services Dundee</p>

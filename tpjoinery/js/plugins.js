@@ -22,3 +22,13 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+$(function() {
+  $(window).on("scroll", function() {
+      if ($(window).scrollTop() > 50) {
+          $(".main_nav").addClass("active_menu");
+      } else {
+          $(".main_nav").removeClass("active_menu");
+      }
+  });
+});
+
