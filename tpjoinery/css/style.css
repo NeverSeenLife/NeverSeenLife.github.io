@@ -211,12 +211,36 @@ body,html{
     margin: 10px;
     background-color: rgba(0, 0, 0, .1);
     padding: 20px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.15);
 }
 
 .fb{
     color: royalblue;
     font-size: 64px;
     margin: 20px;
+    text-decoration: none;
+}
+
+.community{
+    background-color: rgba(0, 0, 0, .1);
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.15);
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.whatsapp{
+    color: #25D366;
+    font-size: 64px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.phone{
+    color: #34B7F1;
+    font-size: 64px;
+    margin: 20px;
+    text-decoration: none;
 }
 
 .page_up{
@@ -303,12 +327,46 @@ button {
     height: 55px;
 }
 
+.scrollp{
+    text-align: center;
+}
+
+.main_btn_2{
+    width: 300px;
+    height: 50px;
+    background: #000000;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .4);
+}
+.main_btn_2:hover{
+    background: #2f2f2f;
+}
+
 .galPhoto{
     cursor: pointer;
+}
+@keyframes arrow {
+    0%{
+        transform: translateY(200%);
+    }
+    50%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translate(0);
+    }
 }
 
 
 @media only screen and (max-width: 900px) {
+
+    .main_nav{
+        position: absolute;
+    }
 
     .hamburger {
         display: block;
@@ -345,7 +403,7 @@ button {
     }
 
     .hamburger.open {
-        position: fixed;
+        position: absolute;
         transform: rotate(45deg) translateY(10px);
         border: none;
     }
@@ -367,8 +425,8 @@ button {
         margin: auto;
         flex-direction: column;
         width: 100%;
-        top: -200px;
-        height: 200px;
+        top: -280px;
+        height: 275px;
         background: #ffffff;
         transition: transform .3s ease-in-out;
         border-bottom: 1px solid #1a1a1a;
@@ -390,23 +448,157 @@ button {
 
     }
     .main_header .main_navigation.active{
-        transform: translateY(200px);
+        transform: translateY(300px);
     }
     
     .main_navigation li .nav_a.first{
         background: #000000;
         color: #ffffff;
     }
+
+    .center_text{
+        font-size: 48px;
+        left: 20px;
+    }
+
+    .main_btn{
+        left: 20px;
+        top: 420px;
+    }
+
+    .main{
+        padding: 0;
+    }
+    .photos{
+        padding: 0;
+    }
+    .photos .photos_row img{
+        width: 320px;
+    }
+    .scroll{
+        height: 300px;
+    }
+    .scrollp{
+        font-size: 24px;
+    }
+    .opinions{
+        flex-direction: column;
+    }
+    .opinionList{
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .page_up{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .footer_navigation{
+        height: 135px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav_footer{
+        padding: 0;
+    }
+
 }
 
-@keyframes arrow {
-    0%{
-        transform: translateY(200%);
-    }
-    50%{
-        transform: translateY(-50%);
-    }
-    100%{
-        transform: translate(0);
-    }
+
+
+.contact_form {
+    width: 100%;
+    display: flex;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    flex-direction: column;
+    
+}
+
+.text_send{
+    margin-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container_email,
+.container_text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.contact_email,.contact_textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #666;
+    width: 300px;
+    height: 30px;
+    color: #1a1a1a;
+    font-size: 13px;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+.contact_textarea{
+    padding-top: 7px;
+}
+
+.contact_textarea{
+    resize: none;
+    height: 120px;
+}
+
+.contact label{
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    transition: .5s;
+    pointer-events: none;
+    user-select: none;
+    background: #ffffff;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label
+{
+    top: -10px;
+    font-size: 13px;
+}
+
+.contact_email:focus,
+.contact_email:not(:placeholder-shown),
+.contact_textarea:focus{
+    border-bottom: 1px solid #2f2f2f;
+}
+
+.contact_send{
+    width: 300px;
+    height: 40px;
+    color: white;
+    background: #666666;
+    border: 1px solid #666;
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+    margin-bottom: 50px;
+}
+.contact_send:hover{
+    background: white;
+    color: black;  
+    cursor: pointer;
 }
