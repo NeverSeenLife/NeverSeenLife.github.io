@@ -242,6 +242,13 @@ body,html{
     margin: 20px;
     text-decoration: none;
 }
+.community i{
+    transition: transform .3s ease-in-out;
+}
+
+.fb i:hover, .whatsapp i:hover, .phone i:hover{
+    transform: rotate(10deg);
+}
 
 .page_up{
     position: fixed;
@@ -503,10 +510,16 @@ button {
     .nav_footer{
         padding: 0;
     }
+    .community{
+        width: 100%;
+    }
+
+    .main .about_us .about_text{
+        text-align: center;
+        text-align-last: auto;
+    }
 
 }
-
-
 
 .contact_form {
     width: 100%;
@@ -550,6 +563,7 @@ button {
     font-size: 13px;
     padding-top: 3px;
     padding-left: 2px;
+    border-radius: none;
 }
 .contact_textarea{
     padding-top: 7px;
@@ -592,7 +606,6 @@ textarea:not(:placeholder-shown) + label
     background: #666666;
     border: 1px solid #666;
     text-transform: uppercase;
-    font-family: fantasy;
     font-size: 16px;
     transition: all .3s ease-in-out;
     margin-bottom: 50px;
@@ -602,3 +615,4 @@ textarea:not(:placeholder-shown) + label
     color: black;  
     cursor: pointer;
 }
+
