@@ -518,7 +518,18 @@ button {
         text-align: center;
         text-align-last: auto;
     }
-
+    .go_back{
+        margin-bottom: 20px;
+    }
+    .go_back a{
+        font-size: 52px;
+        text-decoration: none;
+        color: #000000;
+    }
+    .go_back a i{transition: transform .3s ease-in-out;}
+    .go_back a i:hover{
+        transform: translateY(-10%);
+    }
 }
 
 .contact_form {
