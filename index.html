@@ -18,6 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Just a website creator - NeverSeen</title>
 
 </head>
@@ -33,14 +34,14 @@
 
     <nav class="menu">
 
-        <a href="#" class="logo">NEVERSEEN</a>
+        <a href="index.html" class="logo">NEVERSEEN</a>
 
         <nav class="menu_mobile">
             <button class="hamburger"></button>
         </nav>
 
         <ul class="nav">
-            <li class="nav_menu m_active"><a href="#" class="nav_menu_a">Home</a></li>
+            <li class="nav_menu"><a href="#" class="nav_menu_a">Home</a></li>
             <li class="nav_menu"><a href="#about" class="nav_menu_a">About</a></li>
             <li class="nav_menu"><a href="#projects" class="nav_menu_a">Projects</a></li>
             <li class="nav_menu"><a href="#pricing" class="nav_menu_a">Pricing</a></li>
@@ -50,7 +51,7 @@
         <div class="menu_hamburger">
 
             <ul class="nav_mobile">
-                <li class="nav_mobile_li m_active"><a href="#" class="nav_mobile_a">Home</a></li>
+                <li class="nav_mobile_li"><a href="#" class="nav_mobile_a">Home</a></li>
                 <li class="nav_mobile_li"><a href="#about" class="nav_mobile_a">About</a></li>
                 <li class="nav_mobile_li"><a href="#projects" class="nav_mobile_a">Projects</a></li>
                 <li class="nav_mobile_li"><a href="#pricing" class="nav_mobile_a">Pricing</a></li>
@@ -71,10 +72,14 @@
     </nav>
 
     <header class="heading">
-        <h1 data-aos="fade-up" class="main_heading_text">Front End Developer<span class="ani">_</span></h1>
-        <h3 data-aos="fade-down" class="sec_text pulse">I create webistes with love</h3 data-aos="fade-left">
-        <button onclick="location.href='#about'" class="btn_1" data-aos="fade-left">CHECK ME</button>
 
+        <h3 data-aos="fade-down" class="sec_text">DO YOU NEED A WEBSITE?</h3 data-aos="fade-left">
+        <h1 data-aos="fade-up" class="main_heading_text">LET'S CREATE SOMETHING<span class="ani">_</span></h1>
+        
+        <div class="buttons_holder" data-aos="fade-left">
+        <button onclick="location.href='#about'" class="btn_1">See more</button>
+        <button onclick="location.href='#contact'" class="btn_2" >Contact me</button>
+        </div>
         <a href="#about" class="arrowHref"><i class="fas fa-angle-double-down arrow"></i></a>
 
     </header>
@@ -85,8 +90,8 @@
 
             <h2 class="name" data-aos="fade-up"><b>Hi</b>, my name is Adrian</h2>
 
-            <p class="my_desc" data-aos="fade-up">When i was 10 years old i saw my uncle creating a pretty website about
-                his MU online server
+            <p class="my_desc" data-aos="fade-up">I am simple and creative person who love making websites. When i was 10 years old i saw my uncle creating a pretty website about
+                his MU online server. That was an impulse for me to do things like this. My first 
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat nostrum laborum alias qui.
                 Doloribus, obcaecati repellendus nam saepe, eos excepturi dolor delectus fugiat vitae consectetur
                 dolorem qui praesentium in.
@@ -99,7 +104,7 @@
 
 
 
-            <div class="contaienr_about" data-aos="fade-down">
+            <div class="container_about" data-aos="fade-down">
 
                 <h1>What i use?</h1>
 
@@ -116,15 +121,34 @@
 
         </div>
 
-        <section class="projects">
+        <section class="project_all">
 
             <div class="my_recent_projects" data-aos="fade-down">
-                <h1>My work</h1>
+                <h1 class="name_portfolio">My portfolio</h1>
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="sliderPhoto" src="img/p1.png"></div>
+
+                        <div class="swiper-slide">
+                            <img class="sliderPhoto"src="img/p2.png"></div>
+
+                        <div class="swiper-slide">
+                            <img class="sliderPhoto" src="img/p3.png"></div>
+    
+                    </div>
+
+                    <div class="swiper-pagination"></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div>
+            
+                </div>
 
 
             </div>
 
+
         </section>
+        
 
         <div class="contact_form" id="contact" data-aos="flip-up">
 
@@ -166,5 +190,6 @@
 </body>
 <script src="js/script.js"></script>
 <script src="js/plugin.js"></script>
+<script src="js/main.js"></script>
 
 </html>

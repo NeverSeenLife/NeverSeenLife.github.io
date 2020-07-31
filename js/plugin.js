@@ -17,10 +17,6 @@ $(window).on("load", function() {
     $(".loading").fadeOut("slow");
 });
 
-$(document).on('click', 'ul li', function() {
-    $(this).addClass('m_active').siblings().removeClass('m_active');
-});
-
 $(function() {
     $(window).on("scroll", function() {
         if ($(window).scrollTop() > 50) {

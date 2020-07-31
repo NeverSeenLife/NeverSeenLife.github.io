@@ -117,6 +117,12 @@ body,html{
     z-index: 1;
 }
 
+    
+.main_navigation li .nav_a.first{
+    background: #000000;
+    color: #ffffff;
+}
+
 .center_text{
     font-size: 80px;
     color: #fff;
@@ -458,11 +464,7 @@ button {
     .main_header .main_navigation.active{
         transform: translateY(300px);
     }
-    
-    .main_navigation li .nav_a.first{
-        background: #000000;
-        color: #ffffff;
-    }
+
 
     .center_text{
         font-size: 48px;

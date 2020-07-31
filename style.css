@@ -1,3 +1,5 @@
+@import url('BebasNeue-Regular.otf');
+
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -92,7 +94,7 @@ body,html {
     display: block;
     width: 100%;
     bottom: 0px;
-    height: 1px;
+    height: 2px;
     left: 0;
     transform: translateX(-100%);
     background-color: #ffffff;
@@ -125,23 +127,25 @@ body,html {
 
 .heading .ani {
     animation: blink 0.8s steps(2, start) infinite;
+    user-select: none;
 }
 
 .heading .main_heading_text {
-    text-shadow: 0 0 10px #1a1a1a;
+    
     font-size: 4rem;
-    letter-spacing: 3px;
+    letter-spacing: 8px;
     white-space: pre;
     color: white;
     z-index: 2;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .heading .sec_text {
     color: white;
-    font-size: 2rem;
+    font-size: rem;
+    letter-spacing: 10px;
     white-space: pre;
-    text-shadow: 0 0 10px #1a1a1a;
+    font-weight: 400;
 }
 
 .arrow {
@@ -213,7 +217,7 @@ body,html {
     align-items: center;
 }
 
-.contaienr_about{
+.container_about{
     position: absolute;
     bottom: 85%;
     width: 80%;
@@ -226,6 +230,56 @@ body,html {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.10);
 }
 
+.project_all{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+.name_portfolio{
+    font-size: 3rem;
+    text-align: center;
+    color: #1a1a1a;
+    padding: 50px;
+}
+
+.swiper-container{
+    height: 500px;
+    user-select: none;
+}
+
+.swiper-slide{
+    text-align: center;
+}
+
+.sliderPhoto{
+    object-fit: cover;
+    width: 100%;
+    max-width: 1000px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.10);
+}
+
+.swiper-container .swiper-button-next, .swiper-container .swiper-button-prev{
+    color: #000000;
+    transition: all .3s ease-in-out;
+}
+
+.swiper-container .swiper-button-next::after,.swiper-container .swiper-button-prev::after{
+    font-size: 24px;
+}
+
+.swiper-container .swiper-button-next:hover,.swiper-container .swiper-button-prev:hover{
+    color: #c0c0c0;
+    background: #000000;
+}
+.swiper-container .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    opacity: .4s;
+}
+.swiper-container .swiper-pagination-bullet-active{
+    background: #1a1b1e;
+}
 
 
 .pulse:hover {
@@ -573,69 +627,48 @@ input {
     -moz-appearance: none;
     appearance: none;
     opacity: 1;
+    border-radius: 0%;
 }
-
-
-
-
-
-
-
-
 
 .btn_1 {
     overflow: hidden;
     position: relative;
     height: 50px;
-    width: 150px;
-    border: 0;
-    background-color: black;
-    transition: background .5s ease-in-out;
+    width: 200px;
+    background: #3da9fc;
+    transition: all .3s ease-in-out;
     color: white;
-    font-size: 1.2rem;
-    box-shadow: 0 0 10px 3px #1a1a1a;
-    border-radius: 10px;
+    font-size: 1.3rem;
+    border: 2px solid #3da9fc;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .btn_1:hover {
+    background: transparent;
+    box-shadow: 0 5px 15px -10px rgba(31, 18, 53, .6);
+}
+
+.btn_2{
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    width: 200px;
+    background: transparent;
+    border: 2px solid #3da9fc;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 3px;
     cursor: pointer;
-    z-index: 1;
-    color: black;
+    margin-left: 10px;
+    transition: all .3s ease-in-out;
+} 
+
+.btn_2:hover{
+    background: #3da9fc;
+    box-shadow: 0 5px 15px -10px rgba(31, 18, 53, .6);
 }
 
-.btn_1:hover::before {
-    transform: translate(-50%);
-}
-
-.btn_1:hover::after {
-    transform: translate(50%);
-}
-
-.btn_1::before {
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    left: 100%;
-    transition: transform .9s ease-in-out;
-    content: '';
-    height: 50px;
-    width: 150px;
-    border: 0;
-    background: white
-}
-
-.btn_1::after {
-    position: absolute;
-    top: 0;
-    transition: transform .9s ease-in-out;
-    left: -100%;
-    z-index: -1;
-    content: '';
-    height: 50px;
-    width: 150px;
-    border: 0;
-    background: white
-}
 
 
 
