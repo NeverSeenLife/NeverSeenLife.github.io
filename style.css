@@ -248,6 +248,9 @@ body,html {
 }
 
 .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
