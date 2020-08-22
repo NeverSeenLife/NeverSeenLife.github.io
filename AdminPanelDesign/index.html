@@ -4,33 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8de50fc6b4.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <div class="center_box">
-            <div class="left_side">
+           
+        <h1 class="hi">Dzień dobry!</h1>
+            <div class="left_side animate__animated animate__fadeInLeft">
                 <img src="img/left--img.svg" alt="Login img" class="loginImg">
             </div>
 
             <div class="right_side">
-                <form action="#" method="POST" class="formLogin">
-                    <h1 class="headerLogin">Logowanie do panelu</h1>
-                <input type="text" class="inputLogin" placeholder="Użytkownik">
-
-                <input type="password" class="inputPass" placeholder="Hasło">
-
-                <label class="remember_pass"><p>Pamiętaj mnie</p>
+                <form action="loading.html" method="POST" class="formLogin">
+                    <h1 class="headerLogin animate__animated animate__fadeInTopRight animate__delay-1s">Logowanie do panelu</h1>
+                <div class="containerInputs animate__animated animate__fadeInTopRight animate__delay-1s">
+                    <input type="text" id="login" name="login" class="inputLogin" placeholder=" " required>
+                    <label for="login" class="labelLogin">Użytkownik</label>
+                </div>
+                <div class="containerInputs animate__animated animate__fadeInTopRight animate__delay-1s">
+                    <input type="password" id="pass" class="inputPass" name="password" placeholder=" " required>
+                    <label for="password" class="labelPass">Hasło:</label>
+                    <span class="showPass">
+                        <img src="img/eye.svg" alt="Eye open">
+                    </span>
+                </div>    
+                <div class="error_container animate__animated animate__shakeX animate__delay-1s">
+                    <span class="badLogin"></span>
+                </div>
+                <label class="remember_pass animate__animated animate__fadeInTopRight animate__delay-1s"><p>Pamiętaj mnie</p>
                     <input type="checkbox" id="rememberPass" class="checkboxRememberPass" value="RememberPass" name="rememberPass">
                     <span class="checkBoxCustom"></span>
                 </label>
-                <input type="submit" class="inputSubmit" value="Zaloguj się">
-                <a href="#" class="btnForgetPass">Zapomniałeś <span class="btnForgetPassSpan">loginu</span> lub <span class="btnForgetPassSpan">hasła</span>?</a>
+                <input type="submit" class="inputSubmit animate__animated animate__fadeInBottomRight animate__delay-1s" onclick="myFunction()" value="Zaloguj się">
+                <a href="#" class="btnForgetPass animate__animated animate__fadeInBottomRight animate__delay-1s">Zapomniałeś <span class="btnForgetPassSpan">loginu</span> lub <span class="btnForgetPassSpan">hasła</span>?</a>
                 </form>
+                <div class="modal hideModal">
+                    <div class="modalForgetPass">
+                        <i class="btnClose fas fa-times-circle"></i>
+                        <form method="POST" action="#"></form>
+                        <h1 class="passText">Zapomniałeś hasła?</h1>
+                        <div class="inputsModal">
+                        <input type="email" class="inputEmail" placeholder="Podaj email:" required>
+                        <input type="submit" class="inputSend" value="Wyślij">
+                    </div>
+                    </div>
+                </div>
+
+
             </div>
     </div>
 
 
     
 </body>
+<script>
+    const showBtn = document.querySelector(".showPass img");
+    const inputPass = document.querySelector(".inputPass");
+    const forgetBtn = document.querySelector(".btnForgetPass");
+    const modal = document.querySelector(".modal");
+    let isPasswordShowed = false;
+    let isModalShowed = false;
+    showBtn.addEventListener('click', () =>{
+        if(!isPasswordShowed){
+            inputPass.type = 'text';
+            showBtn.src = 'img/eye-off.svg';
+            isPasswordShowed = true;
+        }else{
+            inputPass.type = 'password';
+            showBtn.src = 'img/eye.svg';
+            isPasswordShowed = false;
+        }
+    });
+    forgetBtn.addEventListener('click', () =>{
+            modal.classList.toggle('hideModal');
+    });
+    document.querySelector('.btnClose').addEventListener('click', () =>{
+            modal.classList.toggle('hideModal');
+    });
+
+
+</script>
+
+<script>
+const rmCheck = document.getElementById("rememberPass"),
+    loginInput = document.getElementById("login"),
+    passInput = document.getElementById("pass");
+
+if (localStorage.checkbox && localStorage.checkbox !== "") {
+  rmCheck.setAttribute("checked", "checked");
+  loginInput.value = localStorage.username;
+  passInput.value = localStorage.password;
+} else {
+  rmCheck.removeAttribute("checked");
+  loginInput.value = "";
+  passInput.value = "";
+}
+
+function lsRememberMe() {
+  if (rmCheck.checked && emailInput.value !== "") {
+    localStorage.username = loginInput.value;
+    localStorage.password = passInput.value;
+    localStorage.checkbox = rmCheck.value;
+  } else {
+    localStorage.username = "";
+    localStorage.password = "";
+    localStorage.checkbox = "";
+  }
+}
+
+</script>
 </html>

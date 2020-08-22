@@ -24,20 +24,9 @@ body{
     height: 600px;
     border-radius: 20px;
     display: flex;
-    position: relative;
     flex-direction: row;
     background: #FFFFFF;
     box-shadow: 25px 25px 25px -4px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-}
-
-.hi{
-    font-weight: 300;
-    position: absolute;
-    color: #828282;
-    left: 50%;
-    top: 50px;
-    transform: translateX(-50%);
 }
 
 .left_side,.right_side{
@@ -46,8 +35,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 20px;
-    flex-direction: column;
 }
 
 .left_side img{
@@ -77,67 +64,10 @@ body{
     border: 1px solid #C9C9C9;
     margin-bottom: 15px;
     padding-left: 8px;
-    font-size: 14px;
-    color: #666666;
-    outline: none;
 }
 
 .inputLogin:focus,.inputPass:focus{
     box-shadow: 1px 1px 15px -4px rgba(0, 0, 0, 0.25);
-}
-.containerInputs{
-    position: relative;
-}
-
-.labelLogin,.labelPass {
-    position: absolute;
-    top: 11px;
-    left: 8px;
-    transition: .5s;
-    pointer-events: none;
-    user-select: none;
-    color: #828282;
-    font-size: 14px;
-}
-
-.inputLogin:focus + .labelLogin,
-.inputLogin:not(:placeholder-shown) + .labelLogin,
-.inputPass:focus + .labelPass,
-.inputPass:not(:placeholder-shown) + .labelPass
-{
-    transform: translateY(-20px) translateX(-9px) scale(.8);
-    background-color: #FFFFFF;
-}
-.inputPass:focus + .labelPass,
-.inputPass:not(:placeholder-shown) + .labelPass{
-    transform: translateY(-20px) translateX(-5px) scale(.8);
-}
-
-.showPass{
-    position: absolute;
-    top: 10px;
-    right: 14px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.showPass img{
-    width: 100%;
-    transition: transform .3s ease-in-out;
-}
-
-.showPass img:hover{
-    transform: scale(1.1);
-}
-
-.error_container{
-    margin-bottom: 15px;
-}
-
-.badLogin{
-    color: #EA2A2A;
 }
 
 .remember_pass{
@@ -150,7 +80,6 @@ body{
     width: 120px;
     user-select: none;
     color: #C9C9C9;
-    transition: all .3s ease-in-out;
 }
 
 .checkboxRememberPass{
@@ -175,8 +104,8 @@ body{
     transition: background-color .3s ease-in-out;
 }
 
-.remember_pass:hover{
-    color: #666;
+.remember_pass:hover input ~ .checkBoxCustom{
+    background-color: #c9c9c9;
 }
 
 .remember_pass input:checked ~ .checkBoxCustom{
@@ -239,121 +168,11 @@ body{
     text-decoration: underline;
 }
 
-.modal{
-    z-index: 99999;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.modal .modalForgetPass{
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 450px;
-    height: 150px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    opacity: 1;
-    transition: opacity .3s ease-in-out;
-    box-shadow: 25px 25px 25px -4px rgba(0, 0, 0, 0.25);
-    animation: test 1s both ease-in-out;
-}
-
-@keyframes test{
-    from{
-        transform: translateY(-350%);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
-.hideModal{
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-}
-
-.btnClose{
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    color: #000000;
-    border: 0;
-    font-size: 32px;
-    cursor: pointer;
-    transition: color .3s ease-in-out;
-}
-
-.btnClose:hover{
-    color: #666666;
-}
-
-.passText{
-    font-size: 22px;
-    color: #828282;
-    margin-bottom: 15px;
-    font-weight: 300;
-}
-
-.inputsModal{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.inputEmail,.inputSend{
-    width: 200px;
-    height: 40px;
-    background: #FFFFFF;
-    border: 1px solid #C9C9C9;
-    margin-bottom: 15px;
-    padding-left: 8px;
-    font-size: 14px;
-    color: #666666;
-    border-right: none;
-    outline: none;
-}
-
-.inputEmail:focus{
-    border-color: #000000;
-}
-
-.inputSend{
-    width: 100px;
-    background: #E85353;
-    padding-left: 0px;
-    color: #FFFFFF;
-    border: 1px solid #E85353;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-.inputSend:hover{
-    background: transparent;
-    color: #666666;
-}
-
-
 @media only screen and (max-width: 900px) {
     body {
         background-image: none;
         background-color: #FFFFFF;
       }
-    .hi{
-        display: none;
-    }
       input{
         filter: none;
         border-radius: 0px;
@@ -376,8 +195,6 @@ body{
       }
       .left_side img{
           width: 80%;
-          max-width: 350px;
-          margin-bottom: 15px;
       }
 
 }

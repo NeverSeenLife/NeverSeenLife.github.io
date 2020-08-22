@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading_container{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: end 2s 5s both linear;
+}
+
+.circle{
+    width: 150px;
+    height: 150px;
+    border: double 0.5em transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(to right, #4D9DCA, #E85353);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.rotate{
+    animation: rotate 1s infinite linear;
+}
+
+.rotateBack{
+    animation: rotateBack 2s infinite linear;
+}
+
+.rotateSlow{
+    animation: rotateBack 2s 1s infinite linear;
+}
+
+.circleMid{
+    width: 125px;
+    height: 125px;
+    z-index: 50;
+    border: double 0.3em transparent;
+    position: relative;
+}
+
+.circleOutside{
+    filter: drop-shadow(0px 2px 28px rgba(0, 0, 0, 0.2));
+}
+
+.circleInside{
+    width: 100px;
+    height: 100px;
+    z-index: 75;
+    border: double 0.3em transparent;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.circleMini{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    z-index: 100;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #4D9DCA, #E85353);
+}
+
+.textPos{
+    width: 300px;
+    text-align: center;
+    height: 50px;
+    transform: translateY(160px);
+    animation: textPos2 2s 5s both ease-in-out;
+}
+
+.loadingText{
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    background: -webkit-linear-gradient(45deg, #E85353, #4D96CA);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+
+}
+.loadingText::after{
+    content: 'Logowanie do panelu';
+    animation: textPos 2s 5s both ease-in-out;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes rotateBack{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+    
+}
+@keyframes end{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+@keyframes textPos{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+        
+    }
+    100%{
+        content: 'Zalogowano';
+        opacity: 1;
+    }
+}
+
+@keyframes textPos2{
+    from{
+        transform: translateY(160px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
