@@ -8,7 +8,7 @@
 }
 
 body{
-    background: url(../img/background.png) no-repeat;
+    background: url(../img/background.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     min-width: 100%;
@@ -31,6 +31,10 @@ body{
     overflow: hidden;
 }
 
+input:invalid {
+    box-shadow: none;
+  }
+
 .hi{
     font-weight: 300;
     position: absolute;
@@ -38,6 +42,7 @@ body{
     left: 50%;
     top: 50px;
     transform: translateX(-50%);
+    user-select: none;
 }
 
 .left_side,.right_side{
@@ -68,6 +73,7 @@ body{
     color: #828282;
     margin-bottom: 15px;
     user-select: none;
+    white-space: nowrap;
 }
 
 .inputLogin,.inputPass{
@@ -181,6 +187,10 @@ body{
 
 .remember_pass input:checked ~ .checkBoxCustom{
     background-color: #C9C9C9;
+}
+
+.remember_pass .remeberMeText{
+    color: #b9b9b9;
 }
 
 .checkBoxCustom::after {
@@ -306,6 +316,7 @@ body{
     color: #828282;
     margin-bottom: 15px;
     font-weight: 300;
+    user-select: none;
 }
 
 .inputsModal{
@@ -354,7 +365,7 @@ body{
     .hi{
         display: none;
     }
-      input{
+    input{
         filter: none;
         border-radius: 0px;
         -webkit-appearance: none;
@@ -363,21 +374,36 @@ body{
         opacity: 1;
         outline: 0;
     }
-      .center_box{
+    .center_box{
           width: 100%;
           height: auto;
           border-radius: 0;
           flex-direction: column;
           box-shadow: none;
-      }
-      .left_side,.right_side{
+    }
+    .left_side,.right_side{
           width: 100%;
           flex-direction: column;
-      }
-      .left_side img{
+    }
+    .left_side img{
           width: 80%;
           max-width: 350px;
           margin-bottom: 15px;
-      }
-
+    }
+    .modal .modalForgetPass{
+        width: 100%;
+        border-radius: 0px;
+        padding: 20px;
+    }
+    .passText{
+        font-size: 18px;
+        text-align: center;
+    }
+    .inputEmail{
+        width: 80%;
+    }
+    .btnClose{
+        right: 7px;
+        top: 7px;
+    }
 }

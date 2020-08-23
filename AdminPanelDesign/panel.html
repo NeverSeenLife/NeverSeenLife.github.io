@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="panel.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8de50fc6b4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<section class="panel">
+
+    <div class="topBar">
+        <a href="#" class="logo">ADMIN<span class="logoColor">Panel</span></a>
+
+        <div class="right_side">
+            <i class="far fa-bell notification"></i>
+            <p class="username">NeverSeen</p>
+            <img src="img/userlogo.jpg" class="userlogo" alt="User logo">
+            <i class="fas fa-chevron-down downArrow"></i>
+        </div>
+
+        <div class="logout">
+            <a href="index.html">Wyloguj się</a>
+        </div>
+    </div>
+
+    <div class="sideBar">
+
+        <ul class="sideBarNav">
+            <li class="navLeft"><a href="#" class="navLeftBtn active"><i class="fas fa-desktop"></i>Panel nawigacji</a></li>
+            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-credit-card"></i>Płatności</a></li>
+            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-cog"></i>Ustawienia</a></li>
+            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-shield-alt"></i>Pomoc techniczna</a></li>
+            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-user"></i>Mój profil</a></li>
+        </ul>
+
+
+    </div>
+
+    <div class="centerContainer">
+
+        <div class="centerBoxBig">
+            <span class="border"></span>
+            <h1 class="usernameWelcome">Witaj, <span class="usernameBold">NeverSeen</span></h1>
+            <h3 class="time" >Jest godzina: <span class="usernameBold">12:34:11</span></h3>
+            <h4 class="weather">Malbork, Słonecznie, <span class="usernameBold"> 21°C</span></h4>
+        </div>
+
+    </div>
+
+
+
+
+</section>
+
+</body>
+
+<script>
+const logout = document.querySelector('.right_side');
+const logoutModal = document.querySelector('.logout');
+logout.addEventListener('click', () =>{
+    logoutModal.classList.toggle('show');
+});
+
+
+
+</script>
+
+</html>

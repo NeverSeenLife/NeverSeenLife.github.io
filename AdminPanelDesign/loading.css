@@ -22,7 +22,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    animation: end 2s 5s both linear;
+    animation: end 1s 5s both linear;
 }
 
 .circle{
