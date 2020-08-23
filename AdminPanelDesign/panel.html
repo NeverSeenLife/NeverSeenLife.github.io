@@ -30,23 +30,42 @@
     <div class="sideBar">
 
         <ul class="sideBarNav">
-            <li class="navLeft"><a href="#" class="navLeftBtn active"><i class="fas fa-desktop"></i>Panel nawigacji</a></li>
-            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-credit-card"></i>Płatności</a></li>
-            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-cog"></i>Ustawienia</a></li>
-            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-shield-alt"></i>Pomoc techniczna</a></li>
-            <li class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-user"></i>Mój profil</a></li>
+            <li data-li="tabs1" class="navLeft"><a href="#"  class="navLeftBtn active"><i class="fas fa-desktop"></i>Panel nawigacji</a></li>
+            <li data-li="tabs2" class="navLeft"><a href="#"  class="navLeftBtn"><i class="fas fa-credit-card"></i>Płatności</a></li>
+            <li data-li="tabs3" class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-cog"></i>Ustawienia</a></li>
+            <li data-li="tabs4" class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-shield-alt"></i>Pomoc techniczna</a></li>
+            <li data-li="tabs5" class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-user"></i>Mój profil</a></li>
         </ul>
 
 
     </div>
 
     <div class="centerContainer">
-
-        <div class="centerBoxBig">
+        <div class="tabs1 centerBoxBig activeTab">
             <span class="border"></span>
             <h1 class="usernameWelcome">Witaj, <span class="usernameBold">NeverSeen</span></h1>
             <h3 class="time" >Jest godzina: <span class="usernameBold">12:34:11</span></h3>
             <h4 class="weather">Malbork, Słonecznie, <span class="usernameBold"> 21°C</span></h4>
+        </div>
+
+        <div class="tabs2 centerBoxBig">
+            <span class="border"></span>
+            <h1 class="usernameWelcome">Płatności użytkownika: <span class="usernameBold">NeverSeen</span></h1>
+        </div>
+
+        <div class="tabs3 centerBoxBig">
+            <span class="border"></span>
+            <h1 class="usernameWelcome">Ustawienia: <span class="usernameBold">NeverSeen</span></h1>
+        </div>
+
+        <div class="tabs4 centerBoxBig">
+            <span class="border"></span>
+            <h1 class="usernameWelcome">Pomoc techniczna: <span class="usernameBold">NeverSeen</span></h1>
+        </div>
+
+        <div class="tabs5 centerBoxBig">
+            <span class="border"></span>
+            <h1 class="usernameWelcome">Mój profil: <span class="usernameBold">NeverSeen</span></h1>
         </div>
 
     </div>
@@ -64,8 +83,35 @@ const logoutModal = document.querySelector('.logout');
 logout.addEventListener('click', () =>{
     logoutModal.classList.toggle('show');
 });
+</script>
 
+<script>
+const ul = document.querySelector('.sideBarNav');
+const li = document.querySelectorAll('.navLeft');
+const tabs = document.querySelectorAll('.centerBoxBig');
+li.forEach(el => {
+    el.addEventListener('click', function(){
+        ul.querySelector('.active').classList.remove('active');
+        el.classList.add('active');
 
+    const tab_value = el.getAttribute("data-li");
+    
+    tabs.forEach(function(item){
+        item.style.display = "none";
+    });
+    if(tab_value == "tabs1"){
+        document.querySelector("." + tab_value).style.display = "block";
+    }else if(tab_value == "tabs2"){
+        document.querySelector("." + tab_value).style.display = "block";
+    }else if(tab_value == "tabs3"){
+        document.querySelector("." + tab_value).style.display = "block";
+    }else if(tab_value == "tabs4"){
+        document.querySelector("." + tab_value).style.display = "block";
+    }else if(tab_value == "tabs5"){
+        document.querySelector("." + tab_value).style.display = "block";
+    }
+    });
+});
 
 </script>
 
