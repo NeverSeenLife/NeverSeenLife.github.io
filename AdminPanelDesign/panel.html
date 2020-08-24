@@ -41,10 +41,10 @@
     </div>
 
     <div class="centerContainer">
-        <div class="tabs1 centerBoxBig activeTab">
+        <div class="tabs1 centerBoxBig" style="display: block;">
             <span class="border"></span>
             <h1 class="usernameWelcome">Witaj, <span class="usernameBold">NeverSeen</span></h1>
-            <h3 class="time" >Jest godzina: <span class="usernameBold">12:34:11</span></h3>
+            <h3 class="time" >Jest godzina: <span class="usernameBold timer">12:34:11</span></h3>
             <h4 class="weather">Malbork, Słonecznie, <span class="usernameBold"> 21°C</span></h4>
         </div>
 
@@ -86,25 +86,22 @@ logout.addEventListener('click', () =>{
 </script>
 
 <script>
-const ul = document.querySelector('.sideBarNav');
-const li = document.querySelectorAll('.navLeft');
-const tabs = document.querySelectorAll('.centerBoxBig');
-li.forEach(el => {
-    el.addEventListener('click', function(){
-        ul.querySelector('.active').classList.remove('active');
-        el.classList.add('active');
-
+    const ul = document.querySelector('.sideBarNav');
+    const li = document.querySelectorAll('.navLeft');
+    const tabs = document.querySelectorAll('.centerBoxBig');
+    li.forEach(el => {
+        el.addEventListener('click', function(){
+            ul.querySelector('.active').classList.remove('active');
+            el.classList.add('active');
     const tab_value = el.getAttribute("data-li");
+        
+        tabs.forEach(function(item){
+            item.style.display = "none";
+        });
+            document.querySelector("." + tab_value).style.display = "block";
+        });
+    });
     
-    tabs.forEach(function(item){
-        item.style.display = "none";
-    });
-
-        document.querySelector("." + tab_value).style.display = "block";
-
-    });
-});
-
-</script>
-
+    </script>
+<script src="js/main.js"></script>
 </html>
