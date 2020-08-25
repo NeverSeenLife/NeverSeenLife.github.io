@@ -13,8 +13,12 @@
 <section class="panel">
 
     <div class="topBar">
-        <a href="#" class="logo">ADMIN<span class="logoColor">Panel</span></a>
+        <a class="logo">ADMIN<span class="logoColor">Panel</span></a>
 
+        <div class="menuBtn">
+		    <button class="hamburger"></button>
+	    </div>
+        
         <div class="right_side">
             <i class="far fa-bell notification"></i>
             <p class="username">NeverSeen</p>
@@ -30,11 +34,11 @@
     <div class="sideBar">
 
         <ul class="sideBarNav">
-            <li data-li="tabs1" class="navLeft"><a href="#"  class="navLeftBtn active"><i class="fas fa-desktop"></i>Panel nawigacji</a></li>
-            <li data-li="tabs2" class="navLeft"><a href="#"  class="navLeftBtn"><i class="fas fa-credit-card"></i>Płatności</a></li>
-            <li data-li="tabs3" class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-cog"></i>Ustawienia</a></li>
-            <li data-li="tabs4" class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-shield-alt"></i>Pomoc techniczna</a></li>
-            <li data-li="tabs5" class="navLeft"><a href="#" class="navLeftBtn"><i class="fas fa-user"></i>Mój profil</a></li>
+            <li data-li="tabs1" class="navLeft"><a class="navLeftBtn active"><i class="fas fa-desktop"></i>Panel nawigacji</a></li>
+            <li data-li="tabs2" class="navLeft"><a class="navLeftBtn"><i class="fas fa-credit-card"></i>Płatności</a></li>
+            <li data-li="tabs3" class="navLeft"><a class="navLeftBtn"><i class="fas fa-cog"></i>Ustawienia</a></li>
+            <li data-li="tabs4" class="navLeft"><a class="navLeftBtn"><i class="fas fa-shield-alt"></i>Pomoc techniczna</a></li>
+            <li data-li="tabs5" class="navLeft"><a class="navLeftBtn"><i class="fas fa-user"></i>Mój profil</a></li>
         </ul>
 
 
@@ -70,38 +74,8 @@
 
     </div>
 
-
-
-
 </section>
-
 </body>
 
-<script>
-const logout = document.querySelector('.right_side');
-const logoutModal = document.querySelector('.logout');
-logout.addEventListener('click', () =>{
-    logoutModal.classList.toggle('show');
-});
-</script>
-
-<script>
-    const ul = document.querySelector('.sideBarNav');
-    const li = document.querySelectorAll('.navLeft');
-    const tabs = document.querySelectorAll('.centerBoxBig');
-    li.forEach(el => {
-        el.addEventListener('click', function(){
-            ul.querySelector('.active').classList.remove('active');
-            el.classList.add('active');
-    const tab_value = el.getAttribute("data-li");
-        
-        tabs.forEach(function(item){
-            item.style.display = "none";
-        });
-            document.querySelector("." + tab_value).style.display = "block";
-        });
-    });
-    
-    </script>
 <script src="js/main.js"></script>
 </html>
