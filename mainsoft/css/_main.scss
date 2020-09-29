@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,600;1,300;1,400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,20 +7,80 @@
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .content{
     width: 100%;
-    padding: 50px;
-    .text1{
-        font-weight: 300;
-        text-align: justify;
-        margin-top: 10px;
-    }
-
 }
 
 .hamburger{
     display: none;
+}
+
+.big--header{
+    width: 100%;
+    height: 380px;
+    background: url("../img/laptop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    line-height: 10px;
+}
+
+.big--header .big--header-text{
+    color: #fff;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    font-size: 64px;
+    z-index: 1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.big--header-mail{
+    background: url("../img/laptopMail.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    flex-direction: column;
+    line-height: 0px;
+}
+
+
+.big--header-text2{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 110px;
+    letter-spacing: 0.13em;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.low--header-text2{
+    z-index: 1;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: 0.13em;
+    color: #FFFFFF;
+}
+
+.big--header::after,.big--header-mail::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(26, 26, 26, 0.43);
+}
+
+.big--header-mail::after{
+    background: rgba(26, 26, 26, 0.85);
 }
