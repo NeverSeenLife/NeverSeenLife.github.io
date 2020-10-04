@@ -1,26 +1,23 @@
 const hamburger = document.querySelector('.menuBtn');
-const menu = document.querySelector('.navBar');
+const menu = document.querySelector('.nav');
 let isHamburherOpen = false;
 
 hamburger.addEventListener('click', () =>{
     if(!isHamburherOpen){
         hamburger.classList.add('active');
-
+        menu.classList.add('open');
         isHamburherOpen = true;
     }else{
         hamburger.classList.remove('active');
-
+        menu.classList.remove('open');
         isHamburherOpen = false;
     }
 });
 
-const logo = document.querySelector('.logoImg');
-
-logo.addEventListener('click', () =>{
-    window.scrollTo(0,document.body.scrollHeight);
-});
-
-window.onscroll = function() {scrollMenu()};
+window.onscroll = function() {
+    scrollMenu();
+    scrollArrow();
+};
 
 function scrollMenu(){
     var header = document.querySelector(".headerBar"), logo = document.querySelector(".logoImg"), navBtn = document.querySelectorAll(".menuBtn");
@@ -38,3 +35,14 @@ function scrollMenu(){
         });
       }
     }
+
+function scrollArrow(){
+    var arrow = document.querySelector(".arrow-up");
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        arrow.classList.add('hideArrow');
+        arrow.classList.remove('opac');
+    }else{
+        arrow.classList.add('opac');
+        arrow.classList.remove('hideArrow');
+    }
+}

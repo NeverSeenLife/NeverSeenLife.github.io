@@ -6,6 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00708f">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
 	<script src="https://kit.fontawesome.com/8de50fc6b4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,8 +23,6 @@
 	<div class="menuBtn">
 		<button class="hamburger"></button>
 	</div>
-
-		
 			<ul class="nav">
 				<img src="img/logo.png" alt="Mainsoft Logo" class="logoImg">
 				<li class="nav--list"><a class="nav--Btn" href="#">Start</a></li>
@@ -27,25 +32,23 @@
 				<li class="nav--list"><a class="nav--Btn" href="#">O nas</a></li>
 				<li class="nav--list"><a class="nav--Btn" href="#">Kontakt</a></li>
 			</ul>
-		
 		</nav>
 	<h1 class="main--text"><b>Mainsoft</b> usługi informatyczne</h1>
 	<p class="low--text">Działamy w sektorze medycznym, handlowym oraz w administracji samorządowej i rządowej. Świadczymy usługi outsourcingu IT, administracji bezpieczeństwem informacji, instalacyjne i wdrożeniowe. Zajmujemy się również dostarczaniem sprzętu oraz oprogramowania.</p>
 	<a href="#content" class="btn--check">Sprawdź</a>
-	<i class="fas fa-chevron-down header-down-arrow"></i>
+	<a href="#content" class="header-down-arrow"><i class="fas fa-chevron-down"></i></a>
 </header>
 
 <section class="content" id="content">
 
-	<div class="bar--content--1">
-		<h2 class="content--title">USŁUGI</h2>
+	<h2 class="content--title">USŁUGI</h2>
 
 		<div class="bar--first">
 		<div class="left-box">
 			<p>Posiadamy oferty dla medycyny, podmiotów 
 				publicznych oraz dla wielu 
 				róznych firm</p>
-			<a href="#content" class="btn--check">Dowiedz się więcej</a>
+			<a href="#content" class="btn--check btn--check-more">Dowiedz się więcej</a>
 		</div>
 			<div class="right--img-box">
 				<img src="img/pic2.svg" alt="Zdjecie serwera">
@@ -53,14 +56,11 @@
 
 		</div>
 
-	</div>
-
 	<div class="big--header">
 		<h1 class="big--header-text">MAINSOFT Sp. z o.o.</h1>
 	</div>
 
-	<div class="bar--content--1">
-		<h2 class="content--title">PRODUKTY</h2>
+	<h2 class="content--title">PRODUKTY</h2>
 
 		<div class="bar--first">
 
@@ -70,21 +70,16 @@
 
 		<div class="left-box right-box">
 			<p>Zajmujemy się drukarkami,projektorami, skanerami, notebookami, serwerami, desktopami oraz dystrybucją zasilania</p>
-			<a href="#content" class="btn--check">Dowiedz się więcej</a>
+			<a href="#content" class="btn--check btn--check-more">Dowiedz się więcej</a>
 		</div>
 
 
 		</div>
 		
-	</div>
-
-
-
 	<div class="big--header big--header-mail">
-		<h1 class="big--header-text2">KONTAKT</h1>
-		<h3 class="low--header-text2">Skontaktuj się z nami</h3>
+		<a href="contact.php" class="big--header-text2">KONTAKT</a>
+		<a href="contact.php" class="low--header-text2">Skontaktuj się z nami</a>
 	</div>
-
 
 </section>
 
@@ -92,18 +87,18 @@
 
 	<div class="footer_high_bar">
 		<div class="footer_links">
-			<div class="link1"><i class="fas fa-phone-alt"></i>
-		<p>+48 600 017 262</p></div>
+			<div class="link1"><p class="phonenumber"><i class="fas fa-phone-alt"></i>
+		+48 600 017 262</p></div>
 
-		<div class="link1"><i class="far fa-envelope"></i>
-		<p>kontakt@mainsoft.pl</p></div>
+		<div class="link1"><a class="mailto" href="mailto:kontakt@mainsoft.pl"><i class="far fa-envelope"></i>kontakt@mainsoft.pl</a></div>
 		
-		<div class="link1">
+		<div class="link1 linkAdress">
 		<i class="fas fa-map-marker-alt"></i>
 
 		<div class="holder_footer">
 		<p>Stare Miasto 27/6</p>
-		<p>82-200 Malbork</p></div></div>
+		<p>82-200 Malbork</p></div>
+		</div>
 
 	</div>
 	</div>
@@ -113,6 +108,10 @@
 	</div>
 
 </footer>
+
+<div class="arrow-up">
+	<a href="#"><button class="arrow-up-button"><i class="up"></i></button></a>
+</div>
 
 </body>
 <script src="js/main.js"></script>
