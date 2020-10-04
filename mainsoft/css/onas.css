@@ -1,0 +1,73 @@
+.header {
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 50px;
+}
+
+.text_container{
+    background: #F3F3F3;
+    border-radius: 6px;
+    width: 90%;
+    margin: 50px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.063);
+    padding: 50px;
+
+}
+
+.logoAboutUs{
+    width: 200px;
+    float: left;
+    user-select: none;
+    pointer-events: none;
+}
+
+.text1,.text2{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.text2{
+    margin-top: 10px;
+}
+
+.content-low-text p{
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.malbork{
+    background: url("../img/malbork.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.slupsk{
+    background: url("../img/slupsk.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.big--header-text2{
+    font-size: 64px;
+}
+
+.bigger{
+    font-size: 72px;
+}
+
+.textCenter{
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 25px;
+}
+
+.text1 a{
+    text-decoration: none;
+    color: #25489b;
+}
+.text1 a:hover{
+    text-decoration: underline;
+}
