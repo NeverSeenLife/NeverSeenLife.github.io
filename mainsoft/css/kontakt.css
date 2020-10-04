@@ -94,6 +94,10 @@ input:invalid, textarea:invalid {
     margin: 20px 0px 20px 0px;
   }
 
+  .contactForm {
+    padding: 20px;
+  }
+
   .inputContactForm, .inputTextSubmit, #textAreaContact {
     width: 100%;
   }

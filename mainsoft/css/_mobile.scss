@@ -192,3 +192,21 @@ body{
 
 
 }
+
+@media only screen and (max-width: 950px) {
+
+    @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+
+        .headerBar{
+            position: absolute;
+            min-height: 125px;
+            height: auto;
+        }
+
+        .hamburger::after {
+            transform: translateY(10px);
+        }
+
+    }
+
+}

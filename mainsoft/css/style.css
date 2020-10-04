@@ -21,7 +21,7 @@ body {
 .big--header {
   width: 100%;
   height: 380px;
-  background: url("../img/laptop.jpg") no-repeat;
+  background: url("../img/laptopMin.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -618,6 +618,19 @@ body {
   .big--header .big--header-text {
     font-size: 24px;
     padding: 0;
+  }
+}
+@media only screen and (max-width: 950px) {
+  @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+    .headerBar {
+      position: absolute;
+      min-height: 125px;
+      height: auto;
+    }
+
+    .hamburger::after {
+      transform: translateY(10px);
+    }
   }
 }
 
