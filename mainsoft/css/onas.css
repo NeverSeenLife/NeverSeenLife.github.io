@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .header {
     width: 100%;
     min-height: 50vh;
@@ -70,4 +74,9 @@
 }
 .text1 a:hover{
     text-decoration: underline;
+}
+
+.content-low-text{
+    display: flex;
+    justify-content: space-around;
 }
