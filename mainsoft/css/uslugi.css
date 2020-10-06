@@ -20,6 +20,8 @@ body{
     margin-top: 100px;
     justify-content: center;
     position: relative;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .box_container_item{
@@ -65,9 +67,9 @@ body{
 .more{
     display: none;
     position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%);
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
     width: 700px;
     padding: 20px;
     height: auto;
@@ -80,6 +82,17 @@ body{
     animation: opacity .5s forwards ease-in-out;
 }
 
+.backgroundModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    animation: opacity .5s forwards ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
 .closeBtn{
     position: absolute;
     right: 20px;
@@ -87,7 +100,6 @@ body{
     top: 20px;
     cursor: pointer;
     color: #000;
-
 }
 
 .closeBtn:hover{
@@ -128,6 +140,7 @@ body{
 
     .box_container{
         width: 100%;
+        border-radius: 0;
     }
 
     .more{

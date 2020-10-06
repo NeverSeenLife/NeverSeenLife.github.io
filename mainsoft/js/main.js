@@ -14,25 +14,6 @@ hamburger.addEventListener('click', () =>{
     }
 });
 
-var more = document.querySelector('.more');
-var btn = document.querySelector('.clickMore');
-let isMoreOpen = false; 
-
-btn.addEventListener('click', () =>{
-    if(!isMoreOpen){
-        more.classList.add('active');
-        isMoreOpen = true;
-    }
-    else{
-        more.classList.remove('active');
-        isMoreOpen = false;
-    }
-});
-document.querySelector('.closeBtn').addEventListener('click', () => {
-    more.classList.remove('active');
-})
-
-
 window.onscroll = function() {
     scrollMenu();
     scrollArrow();

@@ -91,6 +91,7 @@
 				<p>Administracja systemami Firm Gravis, Teensoft, Romad, Radix, Progman, Groszek:</p>
 				<i class="far fa-hand-pointer clickCursor"></i>
 			</div>
+			<span id="backgroundModal"></span>
 			<div class="more">
 				<i class="fas fa-times-circle closeBtn"></i>
 				<p>- Ewidencja Ludności i USC - źródło (wcześniej ZMOKU), Elud, Mieszkańcy</p>
@@ -241,6 +242,31 @@
 	</div>
 
 </body>
+<script>
+var more = document.querySelector('.more');
+var btn = document.querySelector('.clickMore');
+var back = document.querySelector('#backgroundModal');
+let isMoreOpen = false; 
+
+btn.addEventListener('click', () =>{
+    if(!isMoreOpen){
+		more.classList.add('active');
+		back.classList.add('backgroundModal');
+        isMoreOpen = true;
+    }
+    else{
+		more.classList.remove('active');
+		back.classList.remove('backgroundModal');
+        isMoreOpen = false;
+    }
+});
+document.querySelector('.closeBtn').addEventListener('click', () => {
+	more.classList.remove('active');
+	back.classList.remove('backgroundModal');
+    isMoreOpen = false;
+})
+
+</script>
 <script src="../js/main.js"></script>
 
 </html>
