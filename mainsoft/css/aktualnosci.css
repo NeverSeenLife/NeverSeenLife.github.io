@@ -28,7 +28,7 @@ body{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.063);
     background: #fff;
     width: 100%;
-    height: 200px;
+    height: 250px;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -47,7 +47,6 @@ body{
     letter-spacing: 2px;
     text-align: left;
     overflow: hidden;
-    white-space: nowrap;
     text-decoration: none;
     transition: color .3s ease-in-out;
 }
@@ -62,6 +61,8 @@ body{
     justify-content: space-between;
     padding: 0px 5px;
     height: 40px;
+    width: 100%;
+    align-items: center;
 }
 
 .post_info_holder{
@@ -83,9 +84,27 @@ body{
     margin-left: 10px;
 }
 
-.post_title{
-    overflow: hidden;
+.post_title {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
+
+@media only screen and (max-width: 1150px) {
+    .post_title a{
+        font-size: 22px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .post_title a{
+        font-size: 18px;
+    }
+
+}
+
 
 @media only screen and (max-width: 950px) {
 
@@ -97,12 +116,40 @@ body{
         width: 100%;
         border-radius: 0;
         padding: 10px 0px;
+
     }
 
     .post_item{
         width: 100%;
         margin: 5px;
+        height: auto;
+        justify-content: space-around;
     }
 
+    .post_info_holder{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post_main_holder{
+        height: auto;
+    }
+
+    .post_title a{
+        font-size: 18px;
+        letter-spacing: 0px;
+    }
+
+    .post_content{
+        font-size: 14px;
+    }
+    .post_date{
+        font-size: 16px;
+    }
+
+    .post_img{
+        width: 150px;
+    }
 
 }
