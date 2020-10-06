@@ -115,6 +115,14 @@ body {
   letter-spacing: 0.085em;
 }
 
+.left-box .left_text {
+  padding-right: 50px;
+}
+
+.left-box .right_text {
+  padding-left: 50px;
+}
+
 .right--img-box {
   width: 500px;
   height: 350px;
@@ -600,10 +608,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    order: 2;
   }
 
   .left-box p {
     font-size: 24px;
+  }
+
+  .left-box .right_text {
+    padding-left: 0px;
+  }
+
+  .left-box .left_text {
+    padding-right: 0px;
   }
 
   .footer_links {
@@ -631,6 +648,18 @@ body {
     .hamburger::after {
       transform: translateY(10px);
     }
+  }
+}
+@media only screen and (max-width: 1120px) {
+  .left-box {
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
   }
 }
 

@@ -7,7 +7,7 @@
 	<meta name="description"
 		content="Mainsoft - Działamy w sektorze medycznym, handlowym oraz w administracji samorządowej i rządowej. Świadczymy usługi outsourcingu IT, administracji bezpieczeństwem informacji, instalacyjne i wdrożeniowe. Zajmujemy się również dostarczaniem sprzętu oraz oprogramowania." />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	<link rel="stylesheet" type="text/css" href="../css/kontakt.css" />
+	<link rel="stylesheet" type="text/css" href="../css/uslugi.css" />
 	<link href="../css/fontawesome/css/all.min.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -39,32 +39,104 @@
 				<li class="nav--list"><a class="nav--Btn" href="../kontakt/">Kontakt</a></li>
 			</ul>
 		</nav>
-		<h1 class="main--text">KONTAKT</h1>
-		<a href="#content" class="btn--check">Napisz do nas</a>
+		<h1 class="main--text">USŁUGI</h1>
+		<a href="#content" class="btn--check">Sprawdź</a>
 	</header>
 
 	<section class="content" id="content">
 
-		<h2 class="content--title">SKONTAKTUJ SIĘ</h2>
+		<h2 class="content--title">NASZE OFERTY</h2>
 
-		<form action="index.html" class="contactForm" method="POST">
+		<div class="box_container">
+			<h2 class="text_header">Oferta dla medycyny</h2>
 
-			<div class="inputHolder">
-				<input type="text" placeholder="Imię" class="inputContactForm" required>
-				<input type="email" placeholder="Email" class="inputContactForm" required>
+			<div class="box_container_item">
+				<p>Administracja systemami obsługi NZOZ</p>
 			</div>
 
-			<textarea name="textForm" id="textAreaContact" placeholder="Wiadomość" cols="60" rows="5"
-				required></textarea>
-
-			<input type="submit" class="inputTextSubmit" value="Wyślij wiadomość">
-
-			<div class="link1"><a class="mailto" href="mailto:kontakt@mainsoft.pl"><i
-						class="far fa-envelope"></i>kontakt@mainsoft.pl</a>
-						
+			<div class="box_container_item">
+				<p>Wdrażanie i administracja systemami Microsoft oraz domeną Microsoft Windows</p>
 			</div>
-			<a href="/aboutus/" class="btn--check btn--check-more">Więcej informacji</a>
-		</form>
+
+			<div class="box_container_item">
+				<p>Projektowanie, wykonanie i zarządzanie sieciami komputerowymi</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie systemów Bezpieczeństwa Informacji</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie Wirtualizacji Serwerów</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie rozwiązań Obiektów Zasad Grupy Microsoft (GPO - Domena Windows)</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Projektowanie i instalacja  sieci komputerowych z gwarancją na 25 lat (możliwość wykonania dodatkowo instalacji elektrycznych, monitoringu i telefonicznych)</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie systemów IPS/IDS</p>
+			</div>
+
+		</div>
+
+		<div class="box_container">
+			<h2 class="text_header">Oferta dla podmiotów publicznych</h2>
+
+			<div class="box_container_item clickMore" id="clickMore">
+				<p>Administracja systemami Firm Gravis, Teensoft, Romad, Radix, Progman, Groszek:</p>
+				<i class="far fa-hand-pointer clickCursor"></i>
+			</div>
+			<div class="more" id="more">
+				<p>- Ewidencja Ludności i USC - źródło (wcześniej ZMOKU), Elud, Mieszkańcy</p>
+				<p>- Podatki</p>
+				<p>- Księgowość - Bestia, SJO Bestia, fk, homebankingi</p>
+				<p>- Śmieci</p>
+				<p>- Grunty</p>
+				<p>- Geodezja</p>
+				<p>- Systemy kadrowo płacowe</p>
+				<p>- Systemy Fakturowania</p>
+				<p>- Systemy kasowe</p>
+				<p>- Systemy GIS</p>
+			</div>
+			<script>
+				var more = document.getElementsByClassName('more');
+				var btn = document.getElementsByClassName('clickMore');
+				btn.addEventListener('click', () =>{
+					more.style = 'display: block';
+				});
+			</script>
+
+			<div class="box_container_item">
+				<p>Znajomość zamówień publicznych</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie elektronicznych obiegów dokumentów</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie Wirtualizacji Serwerów</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie rozwiązań Obiektów Zasad Grupy Microsoft (GPO - Domena Windows)</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Projektowanie i instalacja  sieci komputerowych z gwarancją na 25 lat (możliwość wykonania dodatkowo instalacji elektrycznych, monitoringu i telefonicznych)</p>
+			</div>
+
+			<div class="box_container_item">
+				<p>Wdrażanie systemów IPS/IDS</p>
+			</div>
+
+		</div>
+
 
 		<div class="big--header big--header-mail">
 			<a href="../kontakt/" class="big--header-text2">KONTAKT</a>
