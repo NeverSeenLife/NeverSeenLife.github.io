@@ -143,6 +143,7 @@ body{
 
     .post_content{
         font-size: 14px;
+        text-align: justify;
     }
     .post_date{
         font-size: 16px;

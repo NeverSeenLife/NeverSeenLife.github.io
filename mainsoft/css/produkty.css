@@ -1,0 +1,148 @@
+body{
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 50px;
+}
+
+.text_container{
+    background: #fff;
+    border-radius: 6px;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.063);
+    padding: 50px;
+    text-align: center;
+}
+
+.text_container h3{
+    font-weight: 300;
+    font-size: 24px;
+}
+.text_container p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.text_container p a{
+    text-decoration: none;
+    color: #25489b;
+}
+
+.text_container p a:hover{
+    text-decoration: underline;
+}
+
+.container_products{
+    background: #fff;
+    border-radius: 6px;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.063);
+    padding: 20px 62px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_products_items{
+    box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.18);
+    background: url(../img/projector.jpg) center center;
+    background-size: contain;
+    width: 250px;
+    height: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px;
+    user-select: none;
+    transition: transform .3s ease-in-out;
+}
+
+.container_products_items:hover{
+    transform: scale(1.15);
+}
+
+.container_products_items:nth-child(2){
+    background: url(../img/notebook.jpg) center center;
+}
+
+.container_products_items:nth-child(3){
+    background: url(../img/printer.jpg) center center;
+    background-size: cover;
+}
+
+.container_products_items:nth-child(4){
+    background: url(../img/skaner.jpg) center center;
+    background-size: cover;
+}
+
+.container_products_items:nth-child(5){
+    background: url(../img/pc.jpg) center center;
+    background-size: cover;
+}
+
+.container_products_items:nth-child(6){
+    background: url(../img/server.jpg) center center;
+    background-size: cover;
+}
+
+.container_products_items:nth-child(7){
+    background: url(../img/ups.jpg) center center;
+    background-size: 240px;
+}
+
+.backgroundBlack{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.itemName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-size: 32px;
+}
+
+.item_max{
+    width: 100%;
+    background: url(../img/podpis.jpg) center center;
+    background-size: cover;
+}
+
+.item_max:hover{
+    transform: none;
+}
+
+.itemName2{
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 950px) {
+
+    .container_products{
+        padding: 20px 0px;
+        width: 100%;
+    }
+
+    .itemName2,.itemInfo3{
+        padding: 0px 40px;
+    }
+
+    .itemName2{
+        font-size: 20px;
+    }
+    .itemInfo3{
+        font-size: 14px;
+    }
+
+}
