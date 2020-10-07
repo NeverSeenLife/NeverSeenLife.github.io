@@ -236,7 +236,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
-  background: url("../img/backgroundDarker.jpg") no-repeat center scroll;
+  background: url("../img/backgroundDarkerLow.jpg") no-repeat center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
