@@ -42,10 +42,32 @@ body{
     font-weight: 600;
 }
 
-.malbork{
+.malbork,.slupsk{
     background: url("../img/malbork.jpg") no-repeat;
-    background-position: center center;
+    width: 100%;
+    height: 380px;
     background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    line-height: 10px;
+    margin: 100px 0px 0px 0px;
+    flex-direction: column;
+}
+
+.malbork::after,.slupsk::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(26, 26, 26, 0.85);
 }
 
 .slupsk{
