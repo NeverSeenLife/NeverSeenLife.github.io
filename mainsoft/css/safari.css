@@ -6,6 +6,10 @@
             height: auto;
         }
 
+        .nav.open{
+            margin-top: 120px;
+        }
+
         .hamburger::after {
             transform: translateY(10px);
         }
