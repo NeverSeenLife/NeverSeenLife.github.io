@@ -1,54 +1,116 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
-<head>
+  <head>
+    <title>Strona responsywna</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Sklep papierniczy</title>
-</head>
-<body>
-    <div class="baner">
-        <h1>W naszym sklepie internetowym kupisz najtaniej</h1>
-    </div>
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Roboto', sans-serif;
+    }
+    section{
+      overflow: hidden;
+    }
+    #ramka{
+      margin-right: auto;
+      margin-left: auto;
+      min-width: 300px;
+      max-width: 1000px;
+    }
+    #naglowek{
+      background-color: #888;
+      font-size: 20pt;
+      color: #000000;
+      font-family: Arial;
+      font-style: italic;
+      text-align:center;
+      font-weight: bold;
+      }
+    #stopka{
+      background-color: #c0c0c0;
+      font-size: 14pt;
+      color: blue;
+      font-family:Arial;
+      font-style:Italic;
+      clear:both;
+    }
+    .kolumny{
+      margin-top: 10px;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      margin-left: 10px;
+      background-color: #c0c0c0;
+    }
+    #kol1{
+      float: left;
+      width: 20%;
+    }
+    #kol2{
+      padding: 25px;
+    }
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width:100%;
+      background-color: #555;
+      border: 1px solid #555;      
+    }
+    li a{
+      display: block;
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration:none;
+    }
+    li{
+      text-align: center;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    li a.active{
+      background-color: #4caf50;
+      color:white;
+    }
+    li a:hover:not(.active){
+      background-color: #f1f1f1;
+      color: black;
+    }
+    @media only screen and (max-width:620px){
+      #kol1{
+        width:100%;
+      } 
+    }
+    </style> 
+  </head>
+  <body>
+        <div id="ramka">
+<header id="naglowek">Szablon responsywny - dwukolumnowy</header>
+             <section class="kolumny" id="kol1">
+                      <h3>Menu</h3>
+                      <ul>
+                          <li><a href="index.html">Start</a></li>
+                          <li><a href="index.html">Kursy</a></li>
+                          <li><a href="index.html">Artykuły</a></li>
+                          <li><a href="index.html">Kontakt</a></li>
+                      </ul>
+             </section>
+             <section class="kolumny" id="kol2"> 
+                      <h3>Opis</h3>
+                      Jeżeli nie zostaną określone szerokości kolumn ani szerokości szablonu,
+        to szablon zajmie całe okno przeglądarki. Zmiana szerokości okna przeglądarki 
+        spowoduje automatyczną modyfikację zawartości strony i jej dostosowanie do aktualnych rozmiarów okna.
+                      Jeżeli w podanym wyżej kodzie umieścimy w kolumnie drugiej fragment tekstu, zaopeserujemy zachowanie się zawartości strony przy zmianie szerokości okna przeglądarki.
+                     Mało praktyczne jest projektowanie strony, która będzie się rozciągała do granic możliwości
+        monitora. Lepiej zaprojektować stronę tak, aby powyżej pewnej szerokości ekranu jej szerokość już się nie zwiększyła
+       , a poniżej pewnej szerokości okna przeglądarki nie zmniejszyła. Aby uzyskać taki efekt, należy zdefiniować minimalną i 
+        maksymalną szerokość bloku zewnętrznego (w powyższym przykładzie identyfikator ramka).
+             </section>
+             <footer id="stopka">
+                <h3>Adrian Kaja </h3> 
 
-    <div class="lewy">
-        <h3>Promocja 15% obejmuje artykuły</h3>
-        <ul>
-            <li>Gumka do mazania</li>
-            <li>Cienkopis</li>
-            <li>Pisaki 60szt.</li>
-            <li>Markery 4szt.</li>
-        </ul>
-
-    </div>
-
-    <div class="srodek">
-        <h3>Cena wybranego artykułu w promocji</h3>
-        <form name="form1" action="mailto:adrian115185@gmail.com" method="POST">
-        <select name="przedmioty" id="przedmioty" required>
-            <option value="Gumka do mazania">Gumka do mazania</option>
-            <option value="Cienkopis">Cienkopis</option>
-            <option value="Pisaki 60szt.">Pisaki 60szt.</option>
-            <option value="Markery 4szt.">Markery 4szt.</option>
-        </select>
-        <input type="submit" value="WYBIERZ">
-        </form>
-    </div>
-
-    <div class="prawy">
-        <h3>Kontakt</h3>
-        <p style="text-align: center;">telefon: 123123123<br>
-            e-mail: <a href="mailto:bok@sklep.pl">bok@sklep.pl</a>
-        </p>
-        <img src="promocja2.png" alt="BlackFridayNapis">
-
-    </div>
-
-    <div class="footer">
-        <h4>Autor strony: Adrian Kaja 3K</h4>
-    </div>
-
-
-</body>
+             </footer>
+        </div>
+  </body>
 </html>
