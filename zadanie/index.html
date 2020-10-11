@@ -1,116 +1,135 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
+
+<head>
     <title>Strona responsywna</title>
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
-    *{
-      margin: 0px;
-      padding: 0px;
-      font-family: 'Roboto', sans-serif;
-    }
-    section{
-      overflow: hidden;
-    }
-    #ramka{
-      margin-right: auto;
-      margin-left: auto;
-      min-width: 300px;
-      max-width: 1000px;
-    }
-    #naglowek{
-      background-color: #888;
-      font-size: 20pt;
-      color: #000000;
-      font-family: Arial;
-      font-style: italic;
-      text-align:center;
-      font-weight: bold;
-      }
-    #stopka{
-      background-color: #c0c0c0;
-      font-size: 14pt;
-      color: blue;
-      font-family:Arial;
-      font-style:Italic;
-      clear:both;
-    }
-    .kolumny{
-      margin-top: 10px;
-      margin-right: 2%;
-      margin-bottom: 2%;
-      margin-left: 10px;
-      background-color: #c0c0c0;
-    }
-    #kol1{
-      float: left;
-      width: 20%;
-    }
-    #kol2{
-      padding: 25px;
-    }
-    ul{
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width:100%;
-      background-color: #555;
-      border: 1px solid #555;      
-    }
-    li a{
-      display: block;
-      color: #fff;
-      padding: 8px 16px;
-      text-decoration:none;
-    }
-    li{
-      text-align: center;
-      border-bottom: 1px solid #f1f1f1;
-    }
-    li a.active{
-      background-color: #4caf50;
-      color:white;
-    }
-    li a:hover:not(.active){
-      background-color: #f1f1f1;
-      color: black;
-    }
-    @media only screen and (max-width:620px){
-      #kol1{
-        width:100%;
-      } 
-    }
-    </style> 
-  </head>
-  <body>
-        <div id="ramka">
-<header id="naglowek">Szablon responsywny - dwukolumnowy</header>
-             <section class="kolumny" id="kol1">
-                      <h3>Menu</h3>
-                      <ul>
-                          <li><a href="index.html">Start</a></li>
-                          <li><a href="index.html">Kursy</a></li>
-                          <li><a href="index.html">Artykuły</a></li>
-                          <li><a href="index.html">Kontakt</a></li>
-                      </ul>
-             </section>
-             <section class="kolumny" id="kol2"> 
-                      <h3>Opis</h3>
-                      Jeżeli nie zostaną określone szerokości kolumn ani szerokości szablonu,
-        to szablon zajmie całe okno przeglądarki. Zmiana szerokości okna przeglądarki 
-        spowoduje automatyczną modyfikację zawartości strony i jej dostosowanie do aktualnych rozmiarów okna.
-                      Jeżeli w podanym wyżej kodzie umieścimy w kolumnie drugiej fragment tekstu, zaopeserujemy zachowanie się zawartości strony przy zmianie szerokości okna przeglądarki.
-                     Mało praktyczne jest projektowanie strony, która będzie się rozciągała do granic możliwości
-        monitora. Lepiej zaprojektować stronę tak, aby powyżej pewnej szerokości ekranu jej szerokość już się nie zwiększyła
-       , a poniżej pewnej szerokości okna przeglądarki nie zmniejszyła. Aby uzyskać taki efekt, należy zdefiniować minimalną i 
-        maksymalną szerokość bloku zewnętrznego (w powyższym przykładzie identyfikator ramka).
-             </section>
-             <footer id="stopka">
-                <h3>Adrian Kaja </h3> 
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Roboto', sans-serif;
+        }
 
-             </footer>
-        </div>
-  </body>
+        body{
+            background-color: #f1f1f1;
+        }
+
+        section {
+            overflow: hidden;
+        }
+
+        #ramka {
+            margin-right: auto;
+            margin-left: auto;
+            min-width: 300px;
+            max-width: 1000px;
+        }
+
+        #naglowek {
+            background: url('baner.jpg') no-repeat center;
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+            font-size: 20pt;
+            color: #fff;
+            font-family: Arial;
+            font-style: italic;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #stopka {
+            background-color: #000;
+            font-size: 14pt;
+            color: #fff;
+            font-family: Arial;
+            clear: both;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .kolumny {
+            margin-top: 10px;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            margin-left: 10px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        #kol1 {
+            float: left;
+            width: 20%;
+        }
+
+        #kol2 {
+            padding: 25px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #000;
+        }
+
+        li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        li img{
+            width: 100%;
+            transition: transform .3s ease-in-out;
+        }
+        li img:hover{
+            transform: scale(1.1);
+        }
+
+        li {
+            text-align: center;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+
+        h3{
+            text-align: center;
+        }
+
+        @media only screen and (max-width:620px) {
+            #kol1 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ramka">
+        <header id="naglowek"></header>
+        <section class="kolumny" id="kol1">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html"><img src="1.jpg" alt="AUDIO"></a></li>
+                <li><a href="index.html"><img src="2.jpg" alt="ANIMACJA"></a></li>
+                <li><a href="index.html"><img src="3.jpg" alt="VIDEO"></a></li>
+            </ul>
+        </section>
+        <section class="kolumny" id="kol2">
+            <h3>Animacja</h3>
+            <img src="animacja.gif" alt="Animacja">
+            
+        </section>
+        <footer id="stopka">
+            <h3>Adrian Kaja</h3>
+
+        </footer>
+    </div>
+</body>
+
 </html>
