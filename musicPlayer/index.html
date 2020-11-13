@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kajafy</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="shortcut icon" href="albumFala.jpg">
+</head>
+
+<body>
+
+    <div class="app" id="app">
+
+        <div class="playerUI">
+            <div class="top_bar">
+                <h3>Dzień dobry</h3>
+            </div>
+
+            <ul>
+                <li><a href="#" id="start">Linkin Park - In the end</a></li>
+                <li><a href="#" id="start2">Guzior - Fala</a></li>
+            </ul>
+
+
+
+            <div class="player hidden">
+                <a href="#" class="btnBack" id="btnBack"><img src="chevron-left.svg" alt=""></a>
+
+                <img src="" alt="Played music album" id="iconM" class="albumImg">
+
+                <div class="musicInfo">
+                    <p class="Music_played_name" id="songName"></p>
+                    <p class="Music_played_creator" id="songAuthor"></p>
+                </div>
+                <div class="proggresBar">
+                    <input type="range" class="musicTime" value="0" min="0" max="100">
+                    <span class="background"></span>
+                    <progress class="backgroundTime" min="0" value="0" max="100"></progress>
+                </div>
+                <span class="timeDuration">
+                    <p id="timeDuration" class="timeDuration">0:00</p>
+                    <span class="duration">0:00</span>
+                </span>
+
+                <div class="playerBtns">
+                    <span class="skip-back">
+                        <img src="skip-back.svg" id="skip-back" class="playBtnIcon" alt="Play/Pause button">
+                    </span>
+
+                    <span class="play">
+                        <img src="play-circle.svg" id="playPause" class="playBtnIcon" alt="Play/Pause button">
+                    </span>
+
+                    <span class="skip-forward">
+                        <img src="skip-forward.svg" id="skip-forward" class="playBtnIcon" alt="Play/Pause button">
+                    </span>
+
+                </div>
+
+                <span class="loop">
+                    <img src="loop.svg" id="loop" class="loopBtnIcon" alt="Play/Pause button">
+                </span>
+
+                <div class="volumePanel">
+                    <img src="vol.svg" alt="Mute/Unmute" id="isMuted">
+                    <input type="range" value="30" min="0" max="100" id="volume">
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
