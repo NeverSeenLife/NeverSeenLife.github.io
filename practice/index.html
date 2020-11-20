@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="test">
+        <a href="#test1">Test1</a>
+        <a href="#test2">Test2</a>
+        <a href="#test3">Test3</a>
+    </div>
+
+    <section id="test1">
+        error
+        <a href="#test1">Test1</a>
+        <a href="#test2">Test2</a>
+        <a href="#test3">Test3</a>
+    </section>
+
+    <section id="test2">
+        error
+        <a href="#test1">Test1</a>
+        <a href="#test2">Test2</a>
+        <a href="#test3">Test3</a>
+    </section>
+
+    <section id="test3">
+        error
+        <a href="#test1">Test1</a>
+        <a href="#test2">Test2</a>
+        <a href="#test3">Test3</a>
+    </section>
+
+
+
+<script>
+
+window.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add("load");
+})
+window.addEventListener('beforeunload', function (e) {
+    document.body.classList.remove("load");
+});
+
+window.addEventListener('unload', function () {
+    sleep(1000);
+})
+let nav = document.querySelector("nav"),
+    navHolder = document.querySelector(".navHolder");
+
+let navRect = nav.getBoundingClientRect();
+
+document.addEventListener('resize', resizeHandler, false);
+
+function resizeHandler() {
+    navRect = nav.getBoundingClientRect();
+
+    navHolder.setAttribute("style", "height: " + navRect.bottom + "px");
+}
+
+resizeHandler();
+
+
+let trigger = document.querySelector(".trigger");
+
+document.addEventListener('scroll', navHandler, false);
+
+function navHandler(e) {
+    navRect = nav.getBoundingClientRect();
+    let triggerRect = trigger.getBoundingClientRect();
+
+    if (triggerRect.top < navRect.bottom / 2) {
+        nav.classList.add("black");
+    } else {
+        nav.classList.remove("black");
+    }
+}
+
+navHandler();
+
+let btn = document.querySelectorAll(".btnMenu");
+
+for (let i=0; i < btn.length; i++) {
+    btn[i].addEventListener('click', toggleMenu, false);
+}
+
+let aside = document.querySelector("aside");
+
+function toggleMenu() {
+    aside.classList.toggle("show");
+}
+
+let asideLinks = document.querySelectorAll("aside a");
+
+for (let i = 0; i < asideLinks.length; i++) {
+    let link = asideLinks[i];
+
+    link.addEventListener('click', function (e) {
+        if (link.getAttribute("href") == "#") {
+            e.preventDefault();
+            aside.classList.remove("show");
+        }
+    }, false);
+}
+
+let anchLink = document.querySelectorAll('a[href^="#"]');
+
+for (let i = 0; i < anchLink.length; i++) {
+    let link = anchLink[i];
+
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (link.getAttribute("href") != "#") {
+            let element = document.querySelector(link.getAttribute("href")),
+                y = element.getBoundingClientRect().top + window.pageYOffset - navRect.bottom;
+
+            window.scrollTo({
+                top: y,
+                behavior: "smooth"
+            });
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add("loaded");
+})
+
+window.addEventListener('beforeunload', function (e) {
+    document.body.classList.remove("loaded");
+});
+
+window.addEventListener('unload', function () {
+    sleep(1000);
+})
+
+function sleep(delay) {
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + delay);
+}
+
+</script>
+
+</body>
+</html>

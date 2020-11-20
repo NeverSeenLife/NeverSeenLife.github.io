@@ -25,6 +25,7 @@
 
 <body>
 
+
     <div id="loading" class="loading">
         <div class="circle"></div>
         <div class="load">
@@ -41,11 +42,11 @@
         </nav>
 
         <ul class="nav">
-            <li class="nav_menu"><a href="#" class="nav_menu_a">Home</a></li>
-            <li class="nav_menu"><a href="#about" class="nav_menu_a">About</a></li>
-            <li class="nav_menu"><a href="#projects" class="nav_menu_a">Projects</a></li>
-            <li class="nav_menu"><a href="#pricing" class="nav_menu_a">Pricing</a></li>
-            <li class="nav_menu"><a href="#contact" class="nav_menu_a">Contact</a></li>
+            <li class="nav_menu"><a onclick="scrollSmoothTo('top')" class="nav_menu_a">Home</a></li>
+            <li class="nav_menu"><a onclick="scrollSmoothTo('about')" class="nav_menu_a">About</a></li>
+            <li class="nav_menu"><a onclick="scrollSmoothTo('projects')" class="nav_menu_a">Projects</a></li>
+            <li class="nav_menu"><a onclick="scrollSmoothTo('pricing')" class="nav_menu_a">Pricing</a></li>
+            <li class="nav_menu"><a onclick="scrollSmoothTo('contact')" class="nav_menu_a">Contact</a></li>
         </ul>
 
         <div class="menu_hamburger">
@@ -71,7 +72,7 @@
 
     </nav>
 
-    <header class="heading">
+    <header class="heading" id="top">
 
         <h3 data-aos="fade-down" class="sec_text">DO YOU NEED A WEBSITE?</h3 data-aos="fade-left">
         <h1 data-aos="fade-up" class="main_heading_text">LET'S CREATE SOMETHING<span class="ani">_</span></h1>
@@ -194,5 +195,12 @@
 <script src="js/script.js"></script>
 <script src="js/plugin.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+function scrollSmoothTo(elementId) {
+  var element = document.getElementById(elementId);
+  element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+}
+</script>
 
 </html>
