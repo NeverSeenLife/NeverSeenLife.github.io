@@ -1,0 +1,16 @@
+:root{
+    --backgroundColor: #fff;
+    --textColor: #000;
+    --hamburger: #000;
+}
+
+.dark{
+    --backgroundColor: #000;
+    --textColor: #fff;
+}
+
+@media (max-width: 836px) {
+    :root{
+    --hamburger: #000;
+    }
+}

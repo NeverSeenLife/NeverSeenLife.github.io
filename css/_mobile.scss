@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+    .nav_bar_top{
+        height: 100px;
+        padding: 0 10px;
+    }
+
+
+    .header_content{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+    .header_left_side{
+        order: 2;
+    }
+    .header_right_side{
+        margin: 0;
+        height: auto;
+    }
+    .hamburger,.hamburger::after,.hamburger::before{
+        background: #000;
+    }
+    .background_1{
+        right: -75px;
+        top: 175px;
+        height: auto;
+    }
+    .background_2{
+        left: -75px;
+        top: 50px;
+        height: auto;
+    }
+    .header_min-text{
+        font-size: 24px;
+    }
+
+    .header_max-text{
+        font-size: 48px;
+        max-width: 400px;
+    }
+
+    .item_projecets{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .container_projects{
+        width: 100%;
+        padding: 20px;
+    }
+    .left_item_side,.right_item_side{
+        max-width: 100%;
+    }
+
+}   
+
+@media (max-width: 1500px) {
+    .header_content{
+        padding: 0 50px;
+    }
+
+}

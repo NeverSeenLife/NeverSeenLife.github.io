@@ -1,206 +1,213 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <title>ADRIAN KAJA - WEB/UI/UX Designer & Front End Developer</title>
+    <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <title>Just a website creator - NeverSeen</title>
-
 </head>
 
 <body>
-
-
-    <div id="loading" class="loading">
-        <div class="circle"></div>
-        <div class="load">
-            <p class="loader">100</p><span>%</span>
-        </div>
-    </div>
-
-    <nav class="menu">
-
-        <a href="index.html" class="logo">NEVERSEEN</a>
-
-        <nav class="menu_mobile">
-            <button class="hamburger"></button>
-        </nav>
-
-        <ul class="nav">
-            <li class="nav_menu"><a onclick="scrollSmoothTo('top')" class="nav_menu_a">Home</a></li>
-            <li class="nav_menu"><a onclick="scrollSmoothTo('about')" class="nav_menu_a">About</a></li>
-            <li class="nav_menu"><a onclick="scrollSmoothTo('projects')" class="nav_menu_a">Projects</a></li>
-            <li class="nav_menu"><a onclick="scrollSmoothTo('pricing')" class="nav_menu_a">Pricing</a></li>
-            <li class="nav_menu"><a onclick="scrollSmoothTo('contact')" class="nav_menu_a">Contact</a></li>
-        </ul>
-
-        <div class="menu_hamburger">
-
-            <ul class="nav_mobile">
-                <li class="nav_mobile_li"><a href="#" class="nav_mobile_a">Home</a></li>
-                <li class="nav_mobile_li"><a href="#about" class="nav_mobile_a">About</a></li>
-                <li class="nav_mobile_li"><a href="#projects" class="nav_mobile_a">Projects</a></li>
-                <li class="nav_mobile_li"><a href="#pricing" class="nav_mobile_a">Pricing</a></li>
-                <li class="nav_mobile_li"><a href="#contact" class="nav_mobile_a">Contact</a></li>
-            </ul>
-
-
-        </div>
-        <div class="page_up">
-            <a href="#"><button class="page_up_btn"><i class="fas fa-angle-up"></i></button>
-            </a>
-        </div>
-
+    <header id="top" class="header">
         <script>
             AOS.init();
         </script>
+        <img src="img/bac.png" class="background_1" alt="background">
 
-    </nav>
+        <div class="nav_bar_top">
 
-    <header class="heading" id="top">
+            <div class="logoContainer">
+                <img src="img/icoTransparent.svg" onclick="scrollSmoothTo('top')" alt="Logo" class="logoImg">
+            </div>
 
-        <h3 data-aos="fade-down" class="sec_text">DO YOU NEED A WEBSITE?</h3 data-aos="fade-left">
-        <h1 data-aos="fade-up" class="main_heading_text">LET'S CREATE SOMETHING<span class="ani">_</span></h1>
-        
-        <div class="buttons_holder" data-aos="fade-left">
-        <button onclick="location.href='#about'" class="btn_1">See more</button>
-        <button onclick="location.href='#contact'" class="btn_2" >Contact me</button>
+            <nav class="nav">
+                <div class="hamburger_container">
+                    <button type="button" class="hamburger"></button>
+                </div>
+            </nav>
+
         </div>
-        <a href="#about" class="arrowHref"><i class="fas fa-angle-double-down arrow"></i></a>
+
+        <span class="modal_exit" style="display: none;"></span>
+        <div class="modal_menu">
+            <ul class="nav_ul">
+                <li class="nav_li"><a onclick="scrollSmoothTo('top')" class="nav_a">Start</a></li>
+                <li class="nav_li"><a onclick="scrollSmoothTo('about')" class="nav_a">About</a></li>
+                <li class="nav_li"><a onclick="scrollSmoothTo('projects')" class="nav_a">Projects</a></li>
+                <li class="nav_li"><a onclick="scrollSmoothTo('contact')" class="nav_a">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="header_content">
+
+            <div class="header_left_side">
+                <p class="header_mini-text">ADRIAN KAJA</p>
+                <h1 class="header_max-text">WEB/UI/UX Designer & Front End Developer</h1>
+            </div>
+
+            <div class="header_right_side">
+                <img src="img/right_illustration.svg" class="header_illustration" alt="Illustration of human">
+            </div>
+
+        </div>
 
     </header>
 
-    <article class="main">
+    <section id="about" class="about_me">
 
-        <div class="main_content_about" id="about">
+        <img src="img/bac2.png" class="background_2" alt="background">
 
-            <h2 class="name" data-aos="fade-up"><b>Hi</b>, my name is Adrian</h2>
+        <div class="header_content about_content">
 
-            <p class="my_desc" data-aos="fade-up">I am simple and creative person who love making websites. When i was 10 years old i saw my uncle creating a pretty website about
-                his MU online server. That was an impulse for me to do things like this. My first 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat nostrum laborum alias qui.
-                Doloribus, obcaecati repellendus nam saepe, eos excepturi dolor delectus fugiat vitae consectetur
-                dolorem qui praesentium in.
-                Thats why I started everything
-            </p>
-
-        </div>
-
-        <div class="main_content_projects" id="projects">
-
-
-
-            <div class="container_about" data-aos="fade-down">
-
-                <h1>What i use?</h1>
-
-                <ul>
-                    <li> <i class="fab fa-html5"></i></li>
-                    <li> <i class="fab fa-css3-alt"></i></li>
-                    <li> <i class="fab fa-js-square"></i></li>
-                    <li> <i class="fab fa-react"></i></li>
-                </ul>
-            
+            <div class="header_right_side" data-aos="fade-right">
+                <img src="img/left_illustration.svg" class="about_illustration" alt="Illustration of human">
             </div>
 
-
+            <div class="header_left_side about_left_side" data-aos="fade-left" data-aos-delay="100">
+                <h1 class="about_heading">About me</h1>
+                <p class="about_desc">Placeholder, tutaj będzie jakiś ładny opis
+                    bardzo ładny</p>
+            </div>
 
         </div>
 
-        <section class="project_all">
+    </section>
 
-            <div class="my_recent_projects" data-aos="fade-down">
-                <h1 class="name_portfolio">My portfolio</h1>
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <h1 style="position: fixed;">Privtrade.pl, najwiekszy projekt</h1>
-                            <img class="sliderPhoto" src="img/p1.png"></div>
+    <section id="projects" class="projects">
+        <h1 class="projects_heading">
+            Projects
+        </h1>
 
-                        <div class="swiper-slide">
-                            <h1 style="position: fixed;">Privtrade.pl, najwiekszy projekt</h1>
-                            <img class="sliderPhoto"src="img/p2.png"></div>
+        <div class="container_projects">
 
-                        <div class="swiper-slide">
-                            <h1 style="position: fixed;">Privtrade.pl, najwiekszy projekt</h1>
-                            <img class="sliderPhoto" src="img/p3.png"></div>
-    
+            <div class="item_projecets" data-aos="fade-right">
+
+                <div class="left_item_side">
+                    <div class="top_text">
+                        <h1 class="item_heading">Mainsoft Workhours</h1>
+                        <p class="item_desc">Application for browsing work hours of your employees</p>
                     </div>
 
-                    <div class="swiper-pagination"></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div>
-            
+                    <a href="https://youtu.be/dQw4w9WgXcQ/" class="checkBtn">
+                        Check it
+                    </a>
+
                 </div>
 
+                <div class="right_item_side">
+                </div>
 
             </div>
 
+            <div class="item_projecets" data-aos="fade-left">
 
-        </section>
-        
+                <div class="left_item_side order2">
+                    <div class="top_text">
+                        <h1 class="item_heading">Mainsoft eWizyta</h1>
+                        <p class="item_desc">Application for video conferencing for web & mobile with 100% encryption
+                        </p>
+                    </div>
 
-        <div class="contact_form" id="contact" data-aos="flip-up">
+                    <a href="https://login-ewizyta.emainsoft.com/" class="checkBtn">
+                        Check it
+                    </a>
 
-            <h1>Contact me</h1>
-
-            <form action="#" method="post" class="contact">
-                <div class="container_email">
-                    <input type="text" class="contact_email" name="email" placeholder=" ">
-                    <label for="contact_email">Email:</label>
-                </div>
-                <div class="container_text">
-                    <textarea class="contact_textarea" id="desc" placeholder=" "></textarea>
-                    <label for="contact_textarea">Text here:</label>
-                    <span id="ile">Pozostało znaków: 500</span>
                 </div>
 
-                <input type="submit" value="SEND" class="contact_send">
+                <div class="right_item_side item2">
+                </div>
+
+            </div>
+
+            <div class="item_projecets" data-aos="fade-right">
+
+                <div class="left_item_side">
+                    <div class="top_text">
+                        <h1 class="item_heading">Privtrade.pl</h1>
+                        <p class="item_desc">Website for Metin2 players who want to trade characters and items</p>
+                    </div>
+
+                    <a href="https://privtrade.pl/" class="checkBtn">
+                        Check it
+                    </a>
+
+                </div>
+
+                <div class="right_item_side item3">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+
+        <div class="contact_container_info" data-aos="fade-right">
+            <h1 class="contact_heading">Contact</h1>
+            <p class="contact_item_info"><img src="img/iconUser.svg" alt="Icon user">Adrian Kaja</p>
+            <p class="contact_item_info"><img src="img/iconMail.svg" alt="Icon email">akaja@mainsoft.pl</p>
+            <p class="contact_item_info"><img src="img/iconMap.svg" alt="Icon map">82-200 Malbork, Poland</p>
+            <p class="contact_item_info"><img src="img/iconPhone.svg" alt="Icon phone">+48 501 759 665</p>
+            <p class="contact_item_info"><img src="img/iconMess.svg" alt="Icon message">/NeverSeenLife1</p>
+
+            <div class="media_container">
+                <a href="https://github.com/NeverSeenLife" class="media_item"><img src="img/github.svg"
+                        class="media_item_icon" alt="Github icon"></a>
+                <a href="https://instagram.com/neverseenlife" class="media_item"><img src="img/instagram.svg"
+                        class="media_item_icon" alt="Github icon"></a>
+                <a href="https://youtube.com/c/neverseenlife" class="media_item"><img src="img/youtube.svg"
+                        class="media_item_icon" alt="Github icon"></a>
+            </div>
+        </div>
+
+        <div class="contact_container_form" data-aos="fade-left" data-aos-delay="300">
+
+            <form action="https://formspree.io/f/mwkwqgjd/" method="POST" class="contact_form">
+
+                <p class="contact_form_heading">Contact me</p>
+
+                <input type="text" name="_replyto" placeholder="Email" class="contact_form_input">
+
+                <textarea name="desc" name="message" placeholder="Message" id="desc" cols="20" rows="10"
+                    class="contact_form_textarea"></textarea>
+
+                <input type="submit" class="contact_form_submit" value="SEND">
+                <a href="mailto:akaja@mainsoft.pl" class="contact_form_add_btn">Direct link</a>
+
             </form>
-
         </div>
 
+    </section>
 
-    </article>
-
-
-    <footer class="footer" id="bottom">
-
-        <div class="about">
-
-            <p class="about_text">
-                Copyright NeverSeenDesign.pl &copy 2020
+    <footer id="footer" class="footer">
+        <img src="img/footer.svg" class="footerBack" alt="">
+        <div class="footer_container">
+            <p class="footer_copyright">
+                <img src="img/icoTransparent2.png" width="25px" height="25px" alt="">
+                Copyright © 2020
             </p>
-            <hr>
-            <h4 class="about_text2">Creating with passion for people...</h4>
-        </div>
 
+            <ul class="footer_nav">
+                <li><a onclick="scrollSmoothTo('top')">Home</a></li>
+                <li><a onclick="scrollSmoothTo('about')">About</a></li>
+                <li><a onclick="scrollSmoothTo('projects')">Projects</a></li>
+                <li><a onclick="scrollSmoothTo('contact')">Contact</a></li>
+            </ul>
+        </div>
     </footer>
 
+    <div class="arrow"></div>
 </body>
-<script src="js/script.js"></script>
-<script src="js/plugin.js"></script>
-<script src="js/main.js"></script>
 
-<script>
-function scrollSmoothTo(elementId) {
-  var element = document.getElementById(elementId);
-  element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
-}
-</script>
+<script src="js/main.js"></script>
 
 </html>

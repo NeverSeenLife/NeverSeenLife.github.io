@@ -1,0 +1,50 @@
+.about_me{
+    width: 100%;
+    min-height: 100vh;
+    color: #000;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+}
+
+.about_heading{
+    font-weight: bold;
+    font-size: 64px;
+    color: #1A1B1E;
+    position: relative;
+    max-width: 280px;
+}
+
+.about_heading::after{
+    content: '';
+    display: block;
+    width: 90%;
+    height: 3px;
+    border-radius: 30px;
+    background: linear-gradient(#BF71B3, #7279D2);
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about_desc{
+    font-weight: 300;
+    font-size: 24px;
+    color: #5B5B5B;
+    max-width: 300px;
+}
+
+.about_left_side{
+    max-width: 475px;
+    margin-right: 0;
+}
+
+.about_content{
+    margin-top: 200px;
+}
+
+.about_illustration{
+    user-select: none;
+}
