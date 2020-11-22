@@ -393,13 +393,13 @@ body {
 }
 
 .item2 {
-  background: url("../img/P1.png") no-repeat;
+  background: url("../img/p1.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .item3 {
-  background: url("../img/P2.png") no-repeat;
+  background: url("../img/p2.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
