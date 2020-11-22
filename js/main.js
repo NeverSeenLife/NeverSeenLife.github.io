@@ -47,6 +47,7 @@ btns.forEach(el => {
 document.querySelector('.modal_exit').addEventListener('click', ()=>{
     menu.classList.remove('active');
     document.querySelector('.modal_exit').style.display = "none";
+    menuBtn.classList.remove('active');
     isOpen = false;
 });
 
