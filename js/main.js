@@ -18,6 +18,7 @@
 const menuBtn = document.querySelector('.hamburger_container');
 const menu = document.querySelector('.modal_menu');
 const btns = document.querySelectorAll('.nav_a');
+const burger = document.querySelector('.nav');
 let root = document.documentElement;
 let isOpen = false;
 
@@ -29,12 +30,14 @@ function modal(){
         //root.style.setProperty('--hamburger', "#000");
         isOpen = true;
         document.querySelector('.modal_exit').style.display = "block";
+        burger.classList.add('active');
     }else{
         menu.classList.remove('active');
         menuBtn.classList.remove('active');
         //setTimeout( function() {root.style.setProperty('--hamburger', "#fff");}, 280);
         isOpen = false;
         document.querySelector('.modal_exit').style.display = "none";
+        burger.classList.remove('active');
     }
 }
 
@@ -49,6 +52,7 @@ document.querySelector('.modal_exit').addEventListener('click', ()=>{
     document.querySelector('.modal_exit').style.display = "none";
     menuBtn.classList.remove('active');
     isOpen = false;
+    burger.classList.remove('active');
 });
 
 // ********** SMOOTH SCROLL TO ELEMENT WITHOUT LINK ******************
@@ -56,3 +60,62 @@ function scrollSmoothTo(elementId) {
     var element = document.getElementById(elementId);
     element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
 }
+
+/*
+var language = {
+    en: {
+        'Aboutme': 'About me',
+        'AboutDesc': 'Placeholder, tutaj będzie jakiś ładny opis bardzo ładny',
+        'Projects': ' Projects',
+        'Project1': 'Application for video conferencing for web & mobile with 100% encryption',
+        'Project2': 'Application for browsing work hours of your employees ',
+        'Project3': 'Website for Metin2 players who want to trade characters and items',
+        'btnCheck': 'Check it',
+        'Contact': 'Contact',
+        'ContactMe': 'Contact me',
+        'Message': 'Message',
+        'DirectLink': 'Direct link',
+        'Home': 'Home',
+        'About': 'About',
+        'Projects': 'Projects'
+    },
+
+    pl: {
+        'Aboutme': 'O mnie',
+        'AboutDesc': 'Placeholder, tutaj będzie jakiś ładny opis bardzo ładny',
+        'Projects': ' Projects',
+        'Project1': 'Application for video conferencing for web & mobile with 100% encryption',
+        'Project2': 'Application for browsing work hours of your employees ',
+        'Project3': 'Website for Metin2 players who want to trade characters and items',
+        'btnCheck': 'Check it',
+        'Contact': 'Contact',
+        'ContactMe': 'Contact me',
+        'Message': 'Message',
+        'DirectLink': 'Direct link',
+        'Home': 'Home',
+        'About': 'About',
+        'Projects': 'Projects'
+    }
+
+}
+var json = '{"name": "Peter", "age": 22, "country": "United States"}';
+var obj = JSON.parse(language);
+
+
+let lang = localStorage.getItem('lang');
+
+const langOn = () => {
+    document.querySelector('about_heading').textContent = obj.en.Aboutme;
+    localStorage.setItem('lang', 'on');
+};
+
+const langOff = () => {
+
+    localStorage.setItem('lang', null);
+};
+
+if (langOn === 'on') {
+    langOn();
+}
+
+*/

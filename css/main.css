@@ -58,7 +58,13 @@ body {
   align-items: center;
   padding: 0 95px;
   z-index: 9999;
+  position: absolute;
+}
+
+.nav.active {
   position: fixed;
+  right: 95px;
+  top: 50px;
 }
 
 .logoContainer {
