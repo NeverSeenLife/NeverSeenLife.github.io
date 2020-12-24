@@ -22,7 +22,7 @@
   font-family: "Lato", sans-serif;
 }
 
-input {
+input, textarea {
   -webkit-appearance: none;
 }
 
