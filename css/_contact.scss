@@ -33,7 +33,10 @@
     margin-right: 10px;
     width: 28px;
     height: 28px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .media_container{

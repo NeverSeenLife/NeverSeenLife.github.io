@@ -5,6 +5,11 @@
         position: absolute;
     }
 
+    .nav.active{
+        right: 10px;
+        top: 25px;
+    }
+
     .contact_container_info{
         display: flex;
         width: 100%;
@@ -106,6 +111,11 @@
 }   
 
 @media (max-width: 1500px) {
+
+    section{
+        overflow: hidden;
+    }
+
     .header_content{
         padding: 0 50px;
     }
