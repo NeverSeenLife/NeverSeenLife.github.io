@@ -1,0 +1,42 @@
+* {
+
+}
+
+body {
+    font-family: Garamond;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.banner,
+.footer {
+    background-color: #3cb371;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 130%;
+}
+
+.left,
+.right {
+    background-color: #FAEBD7;
+    width: 55%;
+    height: 450px;
+}
+
+.right {
+    width: 45%;
+}
+
+.left img {
+    padding: 3px;
+    margin: 15px;
+    border: 2px dashed #3cb371;
+}
+
+.inside {
+    margin: 20px;
+}
