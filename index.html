@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/christmas.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QYGENEQE8"></script>
@@ -23,10 +22,6 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="snow layer1 a"></div>
-        <div class="snow layer1"></div> 
-   </div>
     <header id="top" class="header">
         <script>
             AOS.init();
@@ -83,9 +78,8 @@
             </div>
 
             <div class="header_left_side about_left_side" data-aos="fade-left" data-aos-delay="100">
-                <h1 class="about_heading">About me</h1>
-                <p class="about_desc">Placeholder, tutaj będzie jakiś ładny opis
-                    bardzo ładny</p>
+                <h2 class="about_heading">About me</h2>
+                <p class="about_desc">I'm just Web dev.</p>
             </div>
 
         </div>
@@ -93,9 +87,9 @@
     </section>
 
     <section id="projects" class="projects">
-        <h1 class="projects_heading">
+        <h2 class="projects_heading">
             Projects
-        </h1>
+        </h2>
 
         <div class="container_projects">
 
@@ -103,7 +97,7 @@
 
                 <div class="left_item_side">
                     <div class="top_text">
-                        <h1 class="item_heading">Mainsoft eWizyta</h1>
+                        <h3 class="item_heading">Mainsoft eWizyta</h3>
                         <p class="item_desc">Application for video conferencing for web & mobile with 100% encryption</p>
                     </div>
 
@@ -122,7 +116,7 @@
 
                 <div class="left_item_side order2">
                     <div class="top_text">
-                        <h1 class="item_heading">Mainsoft Workhours</h1>
+                        <h3 class="item_heading">Mainsoft Workhours</h3>
                         <p class="item_desc">Application for browsing work hours of your employees
                         </p>
                     </div>
@@ -142,8 +136,8 @@
 
                 <div class="left_item_side">
                     <div class="top_text">
-                        <h1 class="item_heading">Privtrade.pl</h1>
-                        <p class="item_desc">Website for Metin2 players who want to trade characters and items</p>
+                        <h3 class="item_heading">Privtrade.pl</h3>
+                        <p class="item_desc">Website for Metin2 players who want to trade characters and items. Project is expired.</p>
                     </div>
 
                     <a href="https://privtrade.pl/" class="checkBtn">
@@ -157,6 +151,26 @@
 
             </div>
 
+            <div class="item_projecets" data-aos="fade-left">
+
+                <div class="left_item_side order2">
+                    <div class="top_text">
+                        <h3 class="item_heading">PSM Malbork</h3>
+                        <p class="item_desc">Website for PSM Malbork
+                        </p>
+                    </div>
+
+                    <a href="https://psm.malbork.pl/" class="checkBtn">
+                        Check it
+                    </a>
+
+                </div>
+
+                <div class="right_item_side item4">
+                </div>
+
+            </div>
+
         </div>
 
     </section>
@@ -164,7 +178,7 @@
     <section id="contact" class="contact">
 
         <div class="contact_container_info" data-aos="fade-right">
-            <h1 class="contact_heading">Contact</h1>
+            <h3 class="contact_heading">Contact</h3>
             <p class="contact_item_info"><img src="img/iconUser.svg" alt="Icon user">Adrian Kaja</p>
             <p class="contact_item_info"><img src="img/iconMail.svg" alt="Icon email">akaja@mainsoft.pl</p>
             <p class="contact_item_info"><img src="img/iconMap.svg" alt="Icon map">82-200 Malbork, Poland</p>
@@ -189,7 +203,7 @@
 
                 <input type="text" name="_replyto" placeholder="Email" class="contact_form_input" required>
 
-                <textarea name="desc" name="message" placeholder="Message" id="desc" cols="20" rows="10"
+                <textarea name="message" placeholder="Message" id="desc" cols="20" rows="10"
                     class="contact_form_textarea" required></textarea>
 
                 <input type="submit" class="contact_form_submit" value="SEND">
@@ -201,10 +215,10 @@
     </section>
 
     <footer id="footer" class="footer">
-        <img src="img/Footer.svg" class="footerBack" alt="">
+        <img src="img/Footer.svg" class="footerBack" alt="Footer background">
         <div class="footer_container">
             <p class="footer_copyright">
-                <img src="img/icoTransparent2.png" width="25px" height="25px" alt="">
+                <img src="img/icoTransparent2.png" class="footer_icon" alt="NeverSeen Logo">
                 Copyright © 2021
             </p>
 
@@ -218,8 +232,7 @@
     </footer>
 
     <div class="arrow"></div>
+    <script src="js/main.js"></script>
 </body>
-
-<script src="js/main.js"></script>
 
 </html>

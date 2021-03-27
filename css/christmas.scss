@@ -12,7 +12,7 @@ $s1:"";
 $s2:"";
 $s3:"";
 @for $i from 1 through 400 {
-    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + rgb(255, 248, 248);
+    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + rgb(253, 253, 253);
     $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + rgb(238, 238, 238);
     $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + rgb(196, 196, 196);
     @if $i < 400 {

@@ -1,4 +1,4 @@
-.projects{
+.projects {
     width: 100%;
     min-height: 100vh;
     color: #000;
@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.projects_heading{
+.projects_heading {
     margin: 100px 0px;
     color: #1A1B1E;
     font-weight: bold;
@@ -17,7 +17,7 @@
     position: relative;
 }
 
-.projects_heading::after{
+.projects_heading::after {
     content: '';
     display: block;
     width: 80%;
@@ -29,7 +29,7 @@
     transform: translateX(-50%);
 }
 
-.container_projects{
+.container_projects {
     max-width: 1000px;
     height: auto;
     display: flex;
@@ -37,7 +37,7 @@
     justify-content: center;
 }
 
-.item_projecets{
+.item_projecets {
     width: 760px;
     height: 400px;
     background-color: #fff;
@@ -50,11 +50,11 @@
     margin-bottom: 100px;
 }
 
-.item_projecets:hover{
+.item_projecets:hover {
     box-shadow: 0px 3px 25px rgba(187, 187, 187, 0.5);
 }
 
-.left_item_side{
+.left_item_side {
     max-width: 380px;
     width: 100%;
     height: 400px;
@@ -66,11 +66,11 @@
     background-color: #fff;
 }
 
-.right_item_side:hover{
+.right_item_side:hover {
     transform: scale(1.2);
 }
 
-.item_heading{
+.item_heading {
     font-weight: bold;
     font-size: 36px;
     color: #1A1B1E;
@@ -78,7 +78,7 @@
     letter-spacing: 0.07em;
 }
 
-.item_desc{
+.item_desc {
     font-weight: lighter;
     font-size: 16px;
     color: #989898;
@@ -86,7 +86,7 @@
     max-width: 250px;
 }
 
-.right_item_side{
+.right_item_side {
     max-width: 380px;
     width: 100%;
     height: 400px;
@@ -96,23 +96,29 @@
     transition: transform .3s ease-in-out;
 }
 
-.item2{
+.item2 {
     background: url('../img/p1.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.item3{
+.item3 {
     background: url('../img/p2.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.order2{
+.item4 {
+    background: url('../img/p3.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.order2 {
     order: 2;
 }
 
-.checkBtn{
+.checkBtn {
     text-decoration: none;
     border: 1.5px solid #1A1B1E;
     border-radius: 25px;
@@ -126,7 +132,7 @@
     transition: color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
-.checkBtn:hover{
+.checkBtn:hover {
     background-color: #1A1B1E;
     color: #fff;
 }
