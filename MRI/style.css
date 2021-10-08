@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +8,20 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+}
+
+input,
+textarea {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
     width: 100%;
     height: 75px;
     background: #fff;
-    padding: 0 20px;
+    padding: 0 30px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     align-items: center;
@@ -33,10 +40,16 @@ body {
 .header h1 a {
     color: #555;
     text-decoration: none;
+    background: #e10600;
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+    padding: 5px 10px 5px 5px;
+    border-radius: 8px;
 }
 
-.header .f1 {
-    color: red;
+.f1 {
+    font-weight: 600;
 }
 
 .nav ol {
@@ -77,17 +90,58 @@ body {
     margin-top: 100px;
 }
 
-.participants ul {
+.participants ol {
+    counter-reset: li;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    justify-content: center
+    grid-gap: 25px 40px;
+    padding-left: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.participants ol li {
+    transition: transform .3s ease-in-out;
+}
+
+.participants ol li p {
+    display: block;
+    padding: 5px;
+    background-color: #f0f0f0;
+    transition: background .3s ease-in-out;
+    position: relative;
+}
+
+.participants ol li:hover {
+    transform: translateX(6px);
+    cursor: pointer;
+}
+
+.participants ol li p::before {
+    content: counter(li);
+    counter-increment: li;
+    background-color: #ff0700b5;
+    color: #fff;
+    border-radius: 8px;
+    transition: background .3s ease-out;
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    height: 30px;
+    width: 30px;
+    border: 4px solid #fff;
+    font-weight: bold;
 }
 
 .participants header {
     text-align: center;
     padding: 0 0 20px 0;
+    font-size: 1.5em;
 }
 
 .big-header {
@@ -141,7 +195,7 @@ body {
 
 .footer {
     width: 100%;
-    height: 50px;
+    height: 75px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,8 +209,8 @@ body {
     align-items: center;
 }
 
-input, textarea {
-
+input,
+textarea {
     width: 300px;
     height: 30px;
     border: none;
@@ -165,10 +219,33 @@ input, textarea {
     outline: none;
     padding-left: 10px;
     font-size: 1em;
-    color: #555;
-
 }
 
-textarea {
-    font-family: Arial, Helvetica, sans-serif;
+.teams-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.teams-table-tr {
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 5px;
+    height: 50px;
+    border-collapse: separate;
+    font-weight: 300;
+    font-size: 1em;
+    transition: background-color .1s ease-in-out;
+}
+
+.teams-header {
+    height: 60px;
+    background-color: #f0f0f0;
+}
+
+.teams-table-th {
+    color: #000;
+    font-size: 1.1em;
+    padding: 15px;
+    font-weight: 400;
 }
