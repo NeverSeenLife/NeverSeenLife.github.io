@@ -1,0 +1,26 @@
+.container-projects {
+  max-width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 500px;
+}
+
+.projects-item {
+  margin-bottom: 100px;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.projects-item img {
+  width: 100% !important;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 3px 25px rgba(187, 187, 187, 0.3);
+}
+
+.projects-item img:hover {
+  box-shadow: 0px 3px 25px rgba(187, 187, 187, 0.5);
+}
